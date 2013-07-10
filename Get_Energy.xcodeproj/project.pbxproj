@@ -22,6 +22,8 @@
 		A70B33FA17832A9900EE9D93 /* Get_Energy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A70B33F817832A9900EE9D93 /* Get_Energy.xcdatamodeld */; };
 		A70B33FD17832A9900EE9D93 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70B33FC17832A9900EE9D93 /* MasterViewController.m */; };
 		A70B340017832A9900EE9D93 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70B33FF17832A9900EE9D93 /* DetailViewController.m */; };
+		A70B340C17832FAE00EE9D93 /* _Method.m in Sources */ = {isa = PBXBuildFile; fileRef = A70B340917832FAE00EE9D93 /* _Method.m */; };
+		A70B340D17832FAE00EE9D93 /* Method.m in Sources */ = {isa = PBXBuildFile; fileRef = A70B340B17832FAE00EE9D93 /* Method.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,10 @@
 		A70B33FC17832A9900EE9D93 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		A70B33FE17832A9900EE9D93 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		A70B33FF17832A9900EE9D93 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A70B340817832FAE00EE9D93 /* _Method.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Method.h; sourceTree = "<group>"; };
+		A70B340917832FAE00EE9D93 /* _Method.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Method.m; sourceTree = "<group>"; };
+		A70B340A17832FAE00EE9D93 /* Method.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Method.h; sourceTree = "<group>"; };
+		A70B340B17832FAE00EE9D93 /* Method.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Method.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 				A70B33FE17832A9900EE9D93 /* DetailViewController.h */,
 				A70B33FF17832A9900EE9D93 /* DetailViewController.m */,
 				A70B33F817832A9900EE9D93 /* Get_Energy.xcdatamodeld */,
+				A70B340617832FAE00EE9D93 /* CoreDataModelObjects */,
 				A70B33E117832A9900EE9D93 /* Supporting Files */,
 			);
 			path = Get_Energy;
@@ -120,6 +127,25 @@
 				A70B33F017832A9900EE9D93 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A70B340617832FAE00EE9D93 /* CoreDataModelObjects */ = {
+			isa = PBXGroup;
+			children = (
+				A70B340717832FAE00EE9D93 /* Method */,
+			);
+			path = CoreDataModelObjects;
+			sourceTree = "<group>";
+		};
+		A70B340717832FAE00EE9D93 /* Method */ = {
+			isa = PBXGroup;
+			children = (
+				A70B340817832FAE00EE9D93 /* _Method.h */,
+				A70B340917832FAE00EE9D93 /* _Method.m */,
+				A70B340A17832FAE00EE9D93 /* Method.h */,
+				A70B340B17832FAE00EE9D93 /* Method.m */,
+			);
+			path = Method;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +220,8 @@
 				A70B33FA17832A9900EE9D93 /* Get_Energy.xcdatamodeld in Sources */,
 				A70B33FD17832A9900EE9D93 /* MasterViewController.m in Sources */,
 				A70B340017832A9900EE9D93 /* DetailViewController.m in Sources */,
+				A70B340C17832FAE00EE9D93 /* _Method.m in Sources */,
+				A70B340D17832FAE00EE9D93 /* Method.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
