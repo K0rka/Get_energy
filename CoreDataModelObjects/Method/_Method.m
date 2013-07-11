@@ -8,6 +8,7 @@ const struct MethodAttributes MethodAttributes = {
 	.duration = @"duration",
 	.methoddescription = @"methoddescription",
 	.place = @"place",
+	.star = @"star",
 	.title = @"title",
 };
 
@@ -50,6 +51,11 @@ const struct MethodFetchedProperties MethodFetchedProperties = {
 	}
 	if ([key isEqualToString:@"durationValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"duration"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
+	}
+	if ([key isEqualToString:@"starValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"star"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
@@ -121,6 +127,32 @@ const struct MethodFetchedProperties MethodFetchedProperties = {
 
 @dynamic place;
 
+
+
+
+
+
+@dynamic star;
+
+
+
+- (int32_t)starValue {
+	NSNumber *result = [self star];
+	return [result intValue];
+}
+
+- (void)setStarValue:(int32_t)value_ {
+	[self setStar:[NSNumber numberWithInt:value_]];
+}
+
+- (int32_t)primitiveStarValue {
+	NSNumber *result = [self primitiveStar];
+	return [result intValue];
+}
+
+- (void)setPrimitiveStarValue:(int32_t)value_ {
+	[self setPrimitiveStar:[NSNumber numberWithInt:value_]];
+}
 
 
 

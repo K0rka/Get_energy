@@ -12,8 +12,4 @@
 
 // Custom logic goes here.
 
-//- (void) tempMethod {
-//    self.du
-//}
-
 @end

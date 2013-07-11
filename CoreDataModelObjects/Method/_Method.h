@@ -2,14 +2,15 @@
 // Make changes to Method.h instead.
 
 #import <CoreData/CoreData.h>
-#import "NSManagedObject.h.h"
+
 
 extern const struct MethodAttributes {
-	 NSString *cost;
-	 NSString *duration;
-	 NSString *methoddescription;
-	 NSString *place;
-	 NSString *title;
+	__unsafe_unretained NSString *cost;
+	__unsafe_unretained NSString *duration;
+	__unsafe_unretained NSString *methoddescription;
+	__unsafe_unretained NSString *place;
+	__unsafe_unretained NSString *star;
+	__unsafe_unretained NSString *title;
 } MethodAttributes;
 
 extern const struct MethodRelationships {
@@ -25,10 +26,11 @@ extern const struct MethodFetchedProperties {
 
 
 
+
 @interface MethodID : NSManagedObjectID {}
 @end
 
-@interface _Method : NSManagedObject.h {}
+@interface _Method : NSManagedObject {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
@@ -38,7 +40,7 @@ extern const struct MethodFetchedProperties {
 
 
 
-@property (nonatomic, retain) NSNumber* cost;
+@property (nonatomic, strong) NSNumber* cost;
 
 
 
@@ -52,7 +54,7 @@ extern const struct MethodFetchedProperties {
 
 
 
-@property (nonatomic, retain) NSNumber* duration;
+@property (nonatomic, strong) NSNumber* duration;
 
 
 
@@ -66,7 +68,7 @@ extern const struct MethodFetchedProperties {
 
 
 
-@property (nonatomic, retain) NSString* methoddescription;
+@property (nonatomic, strong) NSString* methoddescription;
 
 
 
@@ -76,7 +78,7 @@ extern const struct MethodFetchedProperties {
 
 
 
-@property (nonatomic, retain) NSString* place;
+@property (nonatomic, strong) NSString* place;
 
 
 
@@ -86,7 +88,21 @@ extern const struct MethodFetchedProperties {
 
 
 
-@property (nonatomic, retain) NSString* title;
+@property (nonatomic, strong) NSNumber* star;
+
+
+
+@property int32_t starValue;
+- (int32_t)starValue;
+- (void)setStarValue:(int32_t)value_;
+
+//- (BOOL)validateStar:(id*)value_ error:(NSError**)error_;
+
+
+
+
+
+@property (nonatomic, strong) NSString* title;
 
 
 
@@ -132,6 +148,15 @@ extern const struct MethodFetchedProperties {
 
 - (NSString*)primitivePlace;
 - (void)setPrimitivePlace:(NSString*)value;
+
+
+
+
+- (NSNumber*)primitiveStar;
+- (void)setPrimitiveStar:(NSNumber*)value;
+
+- (int32_t)primitiveStarValue;
+- (void)setPrimitiveStarValue:(int32_t)value_;
 
 
 
