@@ -8,8 +8,10 @@
 
 #import "MasterViewController.h"
 
+#import <NSManagedObjectContext+MagicalRecord.h>
+
 @interface MasterViewController ()
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+//- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
 
 @implementation MasterViewController
@@ -20,6 +22,7 @@
         self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
     }
     [super awakeFromNib];
+    
 }
 
 - (void)viewDidLoad
@@ -40,9 +43,6 @@
 }
 
 
-- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
-    
-}
 
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {

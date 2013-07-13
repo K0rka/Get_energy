@@ -12,6 +12,9 @@
 
 #import <CoreData/CoreData.h>
 
+/**
+	Main tab bar view controller. Has no special logic
+ */
 @interface MasterViewController : UITabBarController <NSFetchedResultsControllerDelegate, UITabBarControllerDelegate, UITabBarDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;

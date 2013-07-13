@@ -11,20 +11,18 @@
 		A70B33DB17832A9900EE9D93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70B33DA17832A9900EE9D93 /* Foundation.framework */; };
 		A70B33DD17832A9900EE9D93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70B33DC17832A9900EE9D93 /* CoreGraphics.framework */; };
 		A70B33DF17832A9900EE9D93 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70B33DE17832A9900EE9D93 /* CoreData.framework */; };
-		A70B33E517832A9900EE9D93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A70B33E317832A9900EE9D93 /* InfoPlist.strings */; };
-		A70B33E717832A9900EE9D93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A70B33E617832A9900EE9D93 /* main.m */; };
-		A70B33EB17832A9900EE9D93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A70B33EA17832A9900EE9D93 /* AppDelegate.m */; };
-		A70B33ED17832A9900EE9D93 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A70B33EC17832A9900EE9D93 /* Default.png */; };
-		A70B33EF17832A9900EE9D93 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A70B33EE17832A9900EE9D93 /* Default@2x.png */; };
-		A70B33F117832A9900EE9D93 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A70B33F017832A9900EE9D93 /* Default-568h@2x.png */; };
-		A70B33F417832A9900EE9D93 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70B33F217832A9900EE9D93 /* MainStoryboard_iPhone.storyboard */; };
-		A70B33F717832A9900EE9D93 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70B33F517832A9900EE9D93 /* MainStoryboard_iPad.storyboard */; };
-		A70B33FA17832A9900EE9D93 /* Get_Energy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A70B33F817832A9900EE9D93 /* Get_Energy.xcdatamodeld */; };
-		A70B33FD17832A9900EE9D93 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70B33FC17832A9900EE9D93 /* MasterViewController.m */; };
-		A70B340C17832FAE00EE9D93 /* _Method.m in Sources */ = {isa = PBXBuildFile; fileRef = A70B340917832FAE00EE9D93 /* _Method.m */; };
-		A70B340D17832FAE00EE9D93 /* Method.m in Sources */ = {isa = PBXBuildFile; fileRef = A70B340B17832FAE00EE9D93 /* Method.m */; };
-		A7A03D6B178DB7420070405B /* CreateOwnMethodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03D6A178DB7420070405B /* CreateOwnMethodVC.m */; };
-		A7A03D70178DB96D0070405B /* MethodsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03D6F178DB96D0070405B /* MethodsListVC.m */; };
+		A7A03DF6179145630070405B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7A03DF0179145630070405B /* InfoPlist.strings */; };
+		A7A03DF7179145630070405B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7A03DF2179145630070405B /* MainStoryboard_iPad.storyboard */; };
+		A7A03DF8179145630070405B /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7A03DF4179145630070405B /* MainStoryboard_iPhone.storyboard */; };
+		A7A03DF9179145930070405B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03DD3179140C50070405B /* main.m */; };
+		A7A03DFA179145BA0070405B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03DC7179140960070405B /* AppDelegate.m */; };
+		A7A03DFB179145BD0070405B /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03DC9179140960070405B /* MasterViewController.m */; };
+		A7A03DFC179145C30070405B /* CreateOwnMethodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03DD5179140ED0070405B /* CreateOwnMethodVC.m */; };
+		A7A03DFD179145C60070405B /* MethodsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03DD7179140F70070405B /* MethodsListVC.m */; };
+		A7A03E05179149A80070405B /* libMagicalRecord-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A03E04179149A80070405B /* libMagicalRecord-iOS.a */; };
+		A7A03E15179157B40070405B /* Get_Energy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7A03E13179157B40070405B /* Get_Energy.xcdatamodeld */; };
+		A7A03E1A17915B540070405B /* GE_Method.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03E19179159CB0070405B /* GE_Method.m */; };
+		A7A03E1B17915B570070405B /* _GE_Method.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03E17179159CB0070405B /* _GE_Method.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,28 +31,29 @@
 		A70B33DA17832A9900EE9D93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A70B33DC17832A9900EE9D93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A70B33DE17832A9900EE9D93 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		A70B33E217832A9900EE9D93 /* Get_Energy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Get_Energy-Info.plist"; sourceTree = "<group>"; };
-		A70B33E417832A9900EE9D93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A70B33E617832A9900EE9D93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A70B33E817832A9900EE9D93 /* Get_Energy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Get_Energy-Prefix.pch"; sourceTree = "<group>"; };
-		A70B33E917832A9900EE9D93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A70B33EA17832A9900EE9D93 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A70B33EC17832A9900EE9D93 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		A70B33EE17832A9900EE9D93 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		A70B33F017832A9900EE9D93 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		A70B33F317832A9900EE9D93 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		A70B33F617832A9900EE9D93 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		A70B33F917832A9900EE9D93 /* Get_Energy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Get_Energy.xcdatamodel; sourceTree = "<group>"; };
-		A70B33FB17832A9900EE9D93 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		A70B33FC17832A9900EE9D93 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		A70B340817832FAE00EE9D93 /* _Method.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Method.h; sourceTree = "<group>"; };
-		A70B340917832FAE00EE9D93 /* _Method.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Method.m; sourceTree = "<group>"; };
-		A70B340A17832FAE00EE9D93 /* Method.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Method.h; sourceTree = "<group>"; };
-		A70B340B17832FAE00EE9D93 /* Method.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Method.m; sourceTree = "<group>"; };
-		A7A03D69178DB7420070405B /* CreateOwnMethodVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateOwnMethodVC.h; path = CreateOwnVC/CreateOwnMethodVC.h; sourceTree = "<group>"; };
-		A7A03D6A178DB7420070405B /* CreateOwnMethodVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateOwnMethodVC.m; path = CreateOwnVC/CreateOwnMethodVC.m; sourceTree = "<group>"; };
-		A7A03D6E178DB96D0070405B /* MethodsListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodsListVC.h; sourceTree = "<group>"; };
-		A7A03D6F178DB96D0070405B /* MethodsListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodsListVC.m; sourceTree = "<group>"; };
+		A7A03DC6179140960070405B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		A7A03DC7179140960070405B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		A7A03DC8179140960070405B /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = SOURCE_ROOT; };
+		A7A03DC9179140960070405B /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = SOURCE_ROOT; };
+		A7A03DCE179140C50070405B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		A7A03DCF179140C50070405B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
+		A7A03DD0179140C50070405B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		A7A03DD1179140C50070405B /* Get_Energy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Get_Energy-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A7A03DD2179140C50070405B /* Get_Energy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Get_Energy-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		A7A03DD3179140C50070405B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		A7A03DD4179140ED0070405B /* CreateOwnMethodVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CreateOwnMethodVC.h; path = CreateOwnVC/CreateOwnMethodVC.h; sourceTree = SOURCE_ROOT; };
+		A7A03DD5179140ED0070405B /* CreateOwnMethodVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CreateOwnMethodVC.m; path = CreateOwnVC/CreateOwnMethodVC.m; sourceTree = SOURCE_ROOT; };
+		A7A03DD6179140F70070405B /* MethodsListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MethodsListVC.h; path = ViewControllers/MethodsListVC/MethodsListVC.h; sourceTree = SOURCE_ROOT; };
+		A7A03DD7179140F70070405B /* MethodsListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MethodsListVC.m; path = ViewControllers/MethodsListVC/MethodsListVC.m; sourceTree = SOURCE_ROOT; };
+		A7A03DF1179145630070405B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		A7A03DF3179145630070405B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		A7A03DF5179145630070405B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		A7A03E04179149A80070405B /* libMagicalRecord-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libMagicalRecord-iOS.a"; path = "MagicalRecord/Project Files/build/Release-iphoneos/libMagicalRecord-iOS.a"; sourceTree = "<group>"; };
+		A7A03E14179157B40070405B /* Get_Energy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Get_Energy.xcdatamodel; sourceTree = "<group>"; };
+		A7A03E16179159CB0070405B /* _GE_Method.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = _GE_Method.h; path = CoreDataModelObjects/Method/_GE_Method.h; sourceTree = SOURCE_ROOT; };
+		A7A03E17179159CB0070405B /* _GE_Method.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = _GE_Method.m; path = CoreDataModelObjects/Method/_GE_Method.m; sourceTree = SOURCE_ROOT; };
+		A7A03E18179159CB0070405B /* GE_Method.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GE_Method.h; path = CoreDataModelObjects/Method/GE_Method.h; sourceTree = SOURCE_ROOT; };
+		A7A03E19179159CB0070405B /* GE_Method.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GE_Method.m; path = CoreDataModelObjects/Method/GE_Method.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7A03E05179149A80070405B /* libMagicalRecord-iOS.a in Frameworks */,
 				A70B33D917832A9900EE9D93 /* UIKit.framework in Frameworks */,
 				A70B33DB17832A9900EE9D93 /* Foundation.framework in Frameworks */,
 				A70B33DD17832A9900EE9D93 /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +75,7 @@
 		A70B33CC17832A9900EE9D93 = {
 			isa = PBXGroup;
 			children = (
+				A7A03E13179157B40070405B /* Get_Energy.xcdatamodeld */,
 				A70B33E017832A9900EE9D93 /* Get_Energy */,
 				A70B33D717832A9900EE9D93 /* Frameworks */,
 				A70B33D617832A9900EE9D93 /* Products */,
@@ -92,6 +93,7 @@
 		A70B33D717832A9900EE9D93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A7A03E04179149A80070405B /* libMagicalRecord-iOS.a */,
 				A70B33D817832A9900EE9D93 /* UIKit.framework */,
 				A70B33DA17832A9900EE9D93 /* Foundation.framework */,
 				A70B33DC17832A9900EE9D93 /* CoreGraphics.framework */,
@@ -103,14 +105,11 @@
 		A70B33E017832A9900EE9D93 /* Get_Energy */ = {
 			isa = PBXGroup;
 			children = (
+				A7A03DC6179140960070405B /* AppDelegate.h */,
+				A7A03DC7179140960070405B /* AppDelegate.m */,
+				A7A03DC8179140960070405B /* MasterViewController.h */,
+				A7A03DC9179140960070405B /* MasterViewController.m */,
 				A7A03D6C178DB9320070405B /* ViewControllers */,
-				A70B33E917832A9900EE9D93 /* AppDelegate.h */,
-				A70B33EA17832A9900EE9D93 /* AppDelegate.m */,
-				A70B33F217832A9900EE9D93 /* MainStoryboard_iPhone.storyboard */,
-				A70B33F517832A9900EE9D93 /* MainStoryboard_iPad.storyboard */,
-				A70B33FB17832A9900EE9D93 /* MasterViewController.h */,
-				A70B33FC17832A9900EE9D93 /* MasterViewController.m */,
-				A70B33F817832A9900EE9D93 /* Get_Energy.xcdatamodeld */,
 				A70B340617832FAE00EE9D93 /* CoreDataModelObjects */,
 				A70B33E117832A9900EE9D93 /* Supporting Files */,
 			);
@@ -120,13 +119,13 @@
 		A70B33E117832A9900EE9D93 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A70B33E217832A9900EE9D93 /* Get_Energy-Info.plist */,
-				A70B33E317832A9900EE9D93 /* InfoPlist.strings */,
-				A70B33E617832A9900EE9D93 /* main.m */,
-				A70B33E817832A9900EE9D93 /* Get_Energy-Prefix.pch */,
-				A70B33EC17832A9900EE9D93 /* Default.png */,
-				A70B33EE17832A9900EE9D93 /* Default@2x.png */,
-				A70B33F017832A9900EE9D93 /* Default-568h@2x.png */,
+				A7A03DEF179145630070405B /* en.lproj */,
+				A7A03DCE179140C50070405B /* Default-568h@2x.png */,
+				A7A03DCF179140C50070405B /* Default.png */,
+				A7A03DD0179140C50070405B /* Default@2x.png */,
+				A7A03DD1179140C50070405B /* Get_Energy-Info.plist */,
+				A7A03DD2179140C50070405B /* Get_Energy-Prefix.pch */,
+				A7A03DD3179140C50070405B /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -142,10 +141,10 @@
 		A70B340717832FAE00EE9D93 /* Method */ = {
 			isa = PBXGroup;
 			children = (
-				A70B340817832FAE00EE9D93 /* _Method.h */,
-				A70B340917832FAE00EE9D93 /* _Method.m */,
-				A70B340A17832FAE00EE9D93 /* Method.h */,
-				A70B340B17832FAE00EE9D93 /* Method.m */,
+				A7A03E16179159CB0070405B /* _GE_Method.h */,
+				A7A03E17179159CB0070405B /* _GE_Method.m */,
+				A7A03E18179159CB0070405B /* GE_Method.h */,
+				A7A03E19179159CB0070405B /* GE_Method.m */,
 			);
 			path = Method;
 			sourceTree = "<group>";
@@ -153,8 +152,8 @@
 		A7A03D68178DB7100070405B /* CreateOwnVC */ = {
 			isa = PBXGroup;
 			children = (
-				A7A03D69178DB7420070405B /* CreateOwnMethodVC.h */,
-				A7A03D6A178DB7420070405B /* CreateOwnMethodVC.m */,
+				A7A03DD4179140ED0070405B /* CreateOwnMethodVC.h */,
+				A7A03DD5179140ED0070405B /* CreateOwnMethodVC.m */,
 			);
 			name = CreateOwnVC;
 			path = ..;
@@ -172,11 +171,21 @@
 		A7A03D6D178DB9320070405B /* MethodsListVC */ = {
 			isa = PBXGroup;
 			children = (
-				A7A03D6E178DB96D0070405B /* MethodsListVC.h */,
-				A7A03D6F178DB96D0070405B /* MethodsListVC.m */,
+				A7A03DD6179140F70070405B /* MethodsListVC.h */,
+				A7A03DD7179140F70070405B /* MethodsListVC.m */,
 			);
 			path = MethodsListVC;
 			sourceTree = "<group>";
+		};
+		A7A03DEF179145630070405B /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				A7A03DF0179145630070405B /* InfoPlist.strings */,
+				A7A03DF2179145630070405B /* MainStoryboard_iPad.storyboard */,
+				A7A03DF4179145630070405B /* MainStoryboard_iPhone.storyboard */,
+			);
+			path = en.lproj;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -229,12 +238,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A70B33E517832A9900EE9D93 /* InfoPlist.strings in Resources */,
-				A70B33ED17832A9900EE9D93 /* Default.png in Resources */,
-				A70B33EF17832A9900EE9D93 /* Default@2x.png in Resources */,
-				A70B33F117832A9900EE9D93 /* Default-568h@2x.png in Resources */,
-				A70B33F417832A9900EE9D93 /* MainStoryboard_iPhone.storyboard in Resources */,
-				A70B33F717832A9900EE9D93 /* MainStoryboard_iPad.storyboard in Resources */,
+				A7A03DF6179145630070405B /* InfoPlist.strings in Resources */,
+				A7A03DF7179145630070405B /* MainStoryboard_iPad.storyboard in Resources */,
+				A7A03DF8179145630070405B /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,42 +251,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A70B33E717832A9900EE9D93 /* main.m in Sources */,
-				A70B33EB17832A9900EE9D93 /* AppDelegate.m in Sources */,
-				A70B33FA17832A9900EE9D93 /* Get_Energy.xcdatamodeld in Sources */,
-				A70B33FD17832A9900EE9D93 /* MasterViewController.m in Sources */,
-				A70B340C17832FAE00EE9D93 /* _Method.m in Sources */,
-				A70B340D17832FAE00EE9D93 /* Method.m in Sources */,
-				A7A03D6B178DB7420070405B /* CreateOwnMethodVC.m in Sources */,
-				A7A03D70178DB96D0070405B /* MethodsListVC.m in Sources */,
+				A7A03DF9179145930070405B /* main.m in Sources */,
+				A7A03DFA179145BA0070405B /* AppDelegate.m in Sources */,
+				A7A03DFB179145BD0070405B /* MasterViewController.m in Sources */,
+				A7A03DFC179145C30070405B /* CreateOwnMethodVC.m in Sources */,
+				A7A03DFD179145C60070405B /* MethodsListVC.m in Sources */,
+				A7A03E15179157B40070405B /* Get_Energy.xcdatamodeld in Sources */,
+				A7A03E1A17915B540070405B /* GE_Method.m in Sources */,
+				A7A03E1B17915B570070405B /* _GE_Method.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A70B33E317832A9900EE9D93 /* InfoPlist.strings */ = {
+		A7A03DF0179145630070405B /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A70B33E417832A9900EE9D93 /* en */,
+				A7A03DF1179145630070405B /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		A70B33F217832A9900EE9D93 /* MainStoryboard_iPhone.storyboard */ = {
+		A7A03DF2179145630070405B /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A70B33F317832A9900EE9D93 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		A70B33F517832A9900EE9D93 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A70B33F617832A9900EE9D93 /* en */,
+				A7A03DF3179145630070405B /* en */,
 			);
 			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		A7A03DF4179145630070405B /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7A03DF5179145630070405B /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -311,7 +317,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -336,7 +342,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -348,8 +354,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Get_Energy/Get_Energy-Prefix.pch";
-				INFOPLIST_FILE = "Get_Energy/Get_Energy-Info.plist";
+				GCC_PREFIX_HEADER = "Get_Energy-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"<Multiple",
+					"values>",
+					"\"MagicalRecord/MagicalRecord/\"/**",
+				);
+				INFOPLIST_FILE = "Get_Energy-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -359,8 +374,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Get_Energy/Get_Energy-Prefix.pch";
-				INFOPLIST_FILE = "Get_Energy/Get_Energy-Info.plist";
+				GCC_PREFIX_HEADER = "Get_Energy-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"<Multiple",
+					"values>",
+					"\"MagicalRecord/MagicalRecord/\"/**",
+				);
+				INFOPLIST_FILE = "Get_Energy-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -390,12 +414,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A70B33F817832A9900EE9D93 /* Get_Energy.xcdatamodeld */ = {
+		A7A03E13179157B40070405B /* Get_Energy.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A70B33F917832A9900EE9D93 /* Get_Energy.xcdatamodel */,
+				A7A03E14179157B40070405B /* Get_Energy.xcdatamodel */,
 			);
-			currentVersion = A70B33F917832A9900EE9D93 /* Get_Energy.xcdatamodel */;
+			currentVersion = A7A03E14179157B40070405B /* Get_Energy.xcdatamodel */;
 			path = Get_Energy.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

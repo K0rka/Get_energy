@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="1116" y="396"/>
         </scene>
-        <!--View Controller - Item 1-->
+        <!--Methods ListVC - Item 1-->
         <scene sceneID="olA-kd-9Nx">
             <objects>
-                <viewController id="6kc-XN-Zfd" sceneMemberID="viewController">
+                <viewController id="6kc-XN-Zfd" customClass="MethodsListVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aY6-Tu-C5h">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -87,6 +87,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="455" id="fTf-WU-Egz"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="6kc-XN-Zfd" id="McY-RE-gtP"/>
+                                    <outlet property="delegate" destination="6kc-XN-Zfd" id="P5S-VG-Qyx"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -98,6 +102,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="5q6-k8-FPM"/>
                     <connections>
+                        <outlet property="tableView" destination="9U9-Lu-I0o" id="mOa-Du-8b6"/>
                         <segue destination="Nuf-7z-9cH" kind="push" identifier="detailViewPushSegue" id="CKf-WB-5CU"/>
                     </connections>
                 </viewController>
@@ -136,7 +141,7 @@
             <objects>
                 <tabBarController definesPresentationContext="YES" id="t03-wW-4Hf" customClass="MasterViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="YJ4-1Z-wRs"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="e2s-RW-ius">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -153,6 +158,26 @@
             <point key="canvasLocation" x="240" y="78"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CreateOwnMethodVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreateOwnMethodVC.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="MasterViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+        </class>
+        <class className="MethodsListVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MethodsListVC.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

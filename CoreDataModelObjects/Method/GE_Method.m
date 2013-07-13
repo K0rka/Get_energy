@@ -1,14 +1,14 @@
-#import "Method.h"
+#import "GE_Method.h"
 
 
-@interface Method ()
+@interface GE_Method ()
 
 // Private interface goes here.
 
 @end
 
 
-@implementation Method
+@implementation GE_Method
 
 // Custom logic goes here.
 
