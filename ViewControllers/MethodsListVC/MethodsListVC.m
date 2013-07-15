@@ -12,6 +12,7 @@
 #import <NSManagedObject+MagicalRequests.h>
 #import <NSManagedObjectContext+MagicalSaves.h>
 #import <NSManagedObject+MagicalRecord.h>
+#import <NSManagedObject+MagicalDataImport.h>
 
 @interface MethodsListVC ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -39,12 +40,15 @@
     self.managedObjectContext = [NSManagedObjectContext MR_context];
     
     
-    GE_Method *tempMethod = [GE_Method MR_createInContext:self.managedObjectContext];;
-    tempMethod.title = @"Temp";
-    tempMethod.methodDescription = @"temp description";
-    [self.managedObjectContext insertObject:tempMethod];
+    NSString *placesPath = [[NSBundle mainBundle] pathForResource:@"methods" ofType:@"json"];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:placesPath] options:0 error:nil];
+//    NSArray *arrayOfMethods = [placesJSON ]
     
-    [self.managedObjectContext MR_saveToPersistentStoreWithCompletion:nil];
+//    id methodsArray = [GE_Method MR_importFromArray:[dict valueForKey:@"methods"]];//[GE_Method MR_importFromObject:[[dict valueForKey:@"methods"] objectAtIndex:0]];
+    
+    for (id nextObject in [dict valueForKey:@"methods"]) {
+        id method = [GE_Method MR_importFromObject:nextObject];
+    }
     
     //create frc, clear its cache
     NSFetchRequest *requestForFRC = [GE_Method MR_requestAll];

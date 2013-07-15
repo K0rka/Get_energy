@@ -1,0 +1,8 @@
+{"methods" : [
+              {"title":"song", "description" :"just sing your favourite song from heart", "star":"1", "personNumber":"1", "place":"everywhere", "cost":"0"},
+              {"title":"massage", "description":"make your body feels cool", "star":"2", "personNumber":"2", "place":"home", "cost":"0"},
+              {"title":"bath", "description":"bath with your favourite oils", "star":"5", "personNumber":"1", "place":"home", "cost":"0"},
+              {"title":"talk to women", "description":"if they're wise and happily-married makes you happy too", "star":"3", "personNumber":"2", "place":"everywhere", "cost":"0"},
+              {"title":"sex", "description":"oh, do you really need description?", "star":"10", "personNumber":"2", "place":"everywhere", "cost":"0"}
+              ]
+}

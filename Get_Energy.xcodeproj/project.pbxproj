@@ -23,6 +23,7 @@
 		A7A03E15179157B40070405B /* Get_Energy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7A03E13179157B40070405B /* Get_Energy.xcdatamodeld */; };
 		A7A03E1A17915B540070405B /* GE_Method.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03E19179159CB0070405B /* GE_Method.m */; };
 		A7A03E1B17915B570070405B /* _GE_Method.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03E17179159CB0070405B /* _GE_Method.m */; };
+		A7A03E3B179167350070405B /* methods.json in Resources */ = {isa = PBXBuildFile; fileRef = A7A03E3A179167340070405B /* methods.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		A7A03E17179159CB0070405B /* _GE_Method.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = _GE_Method.m; path = CoreDataModelObjects/Method/_GE_Method.m; sourceTree = SOURCE_ROOT; };
 		A7A03E18179159CB0070405B /* GE_Method.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GE_Method.h; path = CoreDataModelObjects/Method/GE_Method.h; sourceTree = SOURCE_ROOT; };
 		A7A03E19179159CB0070405B /* GE_Method.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GE_Method.m; path = CoreDataModelObjects/Method/GE_Method.m; sourceTree = SOURCE_ROOT; };
+		A7A03E3A179167340070405B /* methods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = methods.json; path = CoreDataModelObjects/methods.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				A7A03DD1179140C50070405B /* Get_Energy-Info.plist */,
 				A7A03DD2179140C50070405B /* Get_Energy-Prefix.pch */,
 				A7A03DD3179140C50070405B /* main.m */,
+				A7A03E3A179167340070405B /* methods.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				A7A03DF6179145630070405B /* InfoPlist.strings in Resources */,
 				A7A03DF7179145630070405B /* MainStoryboard_iPad.storyboard in Resources */,
 				A7A03DF8179145630070405B /* MainStoryboard_iPhone.storyboard in Resources */,
+				A7A03E3B179167350070405B /* methods.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

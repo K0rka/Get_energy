@@ -3,12 +3,23 @@
     <entity name="GE_Method" representedClassName="GE_Method" syncable="YES">
         <attribute name="cost" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="duration" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="methodDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="methodDescription" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="description"/>
+            </userInfo>
+        </attribute>
         <attribute name="peopleNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="place" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="preparedList" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="star" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="title"/>
+            </userInfo>
+        </attribute>
+        <userInfo>
+            <entry key="relatedByAttribute" value="title"/>
+        </userInfo>
     </entity>
     <elements>
         <element name="GE_Method" positionX="160" positionY="192" width="128" height="165"/>
