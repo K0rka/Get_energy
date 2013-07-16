@@ -85,6 +85,9 @@
     
     GE_Method *current = [self.fetchedResultController objectAtIndexPath:indexPath];
     [cell.textLabel setText:current.title];
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     return  cell;
 }
 
@@ -94,19 +97,6 @@
     return self.fetchedResultController.fetchedObjects.count;
 }
 
-
-//==============================================================================
-//- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"indexPath = %@", indexPath);
-//    return indexPath;
-//}
-//
-//
-////==============================================================================
-//- (NSIndexPath *)tableView:(UITableView *)tableView willDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"indexPath = %@", indexPath);
-//    return indexPath;
-//}
 
 //==============================================================================
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -35,6 +35,8 @@
 		A70B33DE17832A9900EE9D93 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A7835767179447F500E8A7F1 /* DetailMethodDescriptionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailMethodDescriptionVC.h; path = ViewControllers/MethodsListVC/DetailDescription/DetailMethodDescriptionVC.h; sourceTree = SOURCE_ROOT; };
 		A7835768179447F500E8A7F1 /* DetailMethodDescriptionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailMethodDescriptionVC.m; path = ViewControllers/MethodsListVC/DetailDescription/DetailMethodDescriptionVC.m; sourceTree = SOURCE_ROOT; };
+		A783576E1795165700E8A7F1 /* SharedNotificationsName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedNotificationsName.h; sourceTree = "<group>"; };
+		A783576F1795167600E8A7F1 /* SharedObjectsDescriptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedObjectsDescriptions.h; sourceTree = "<group>"; };
 		A7A03DC6179140960070405B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		A7A03DC7179140960070405B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		A7A03DC8179140960070405B /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = SOURCE_ROOT; };
@@ -80,7 +82,6 @@
 		A70B33CC17832A9900EE9D93 = {
 			isa = PBXGroup;
 			children = (
-				A7A03E13179157B40070405B /* Get_Energy.xcdatamodeld */,
 				A70B33E017832A9900EE9D93 /* Get_Energy */,
 				A70B33D717832A9900EE9D93 /* Frameworks */,
 				A70B33D617832A9900EE9D93 /* Products */,
@@ -124,6 +125,7 @@
 		A70B33E117832A9900EE9D93 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A783576D1795165700E8A7F1 /* SharedObjects */,
 				A7A03DEF179145630070405B /* en.lproj */,
 				A7A03DCE179140C50070405B /* Default-568h@2x.png */,
 				A7A03DCF179140C50070405B /* Default.png */,
@@ -139,6 +141,7 @@
 		A70B340617832FAE00EE9D93 /* CoreDataModelObjects */ = {
 			isa = PBXGroup;
 			children = (
+				A7A03E13179157B40070405B /* Get_Energy.xcdatamodeld */,
 				A70B340717832FAE00EE9D93 /* Method */,
 			);
 			path = CoreDataModelObjects;
@@ -163,6 +166,15 @@
 			);
 			name = DetailDescription;
 			sourceTree = "<group>";
+		};
+		A783576D1795165700E8A7F1 /* SharedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				A783576E1795165700E8A7F1 /* SharedNotificationsName.h */,
+				A783576F1795167600E8A7F1 /* SharedObjectsDescriptions.h */,
+			);
+			path = SharedObjects;
+			sourceTree = SOURCE_ROOT;
 		};
 		A7A03D68178DB7100070405B /* CreateOwnVC */ = {
 			isa = PBXGroup;
@@ -438,7 +450,8 @@
 				A7A03E14179157B40070405B /* Get_Energy.xcdatamodel */,
 			);
 			currentVersion = A7A03E14179157B40070405B /* Get_Energy.xcdatamodel */;
-			path = Get_Energy.xcdatamodeld;
+			name = Get_Energy.xcdatamodeld;
+			path = ../../Get_Energy.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
