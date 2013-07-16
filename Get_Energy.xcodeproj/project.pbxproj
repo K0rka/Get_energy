@@ -11,6 +11,7 @@
 		A70B33DB17832A9900EE9D93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70B33DA17832A9900EE9D93 /* Foundation.framework */; };
 		A70B33DD17832A9900EE9D93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70B33DC17832A9900EE9D93 /* CoreGraphics.framework */; };
 		A70B33DF17832A9900EE9D93 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70B33DE17832A9900EE9D93 /* CoreData.framework */; };
+		A7835769179447F500E8A7F1 /* DetailMethodDescriptionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7835768179447F500E8A7F1 /* DetailMethodDescriptionVC.m */; };
 		A7A03DF6179145630070405B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7A03DF0179145630070405B /* InfoPlist.strings */; };
 		A7A03DF7179145630070405B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7A03DF2179145630070405B /* MainStoryboard_iPad.storyboard */; };
 		A7A03DF8179145630070405B /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7A03DF4179145630070405B /* MainStoryboard_iPhone.storyboard */; };
@@ -32,6 +33,8 @@
 		A70B33DA17832A9900EE9D93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A70B33DC17832A9900EE9D93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A70B33DE17832A9900EE9D93 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A7835767179447F500E8A7F1 /* DetailMethodDescriptionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailMethodDescriptionVC.h; path = ViewControllers/MethodsListVC/DetailDescription/DetailMethodDescriptionVC.h; sourceTree = SOURCE_ROOT; };
+		A7835768179447F500E8A7F1 /* DetailMethodDescriptionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailMethodDescriptionVC.m; path = ViewControllers/MethodsListVC/DetailDescription/DetailMethodDescriptionVC.m; sourceTree = SOURCE_ROOT; };
 		A7A03DC6179140960070405B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		A7A03DC7179140960070405B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		A7A03DC8179140960070405B /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = SOURCE_ROOT; };
@@ -152,6 +155,15 @@
 			path = Method;
 			sourceTree = "<group>";
 		};
+		A7835766179447C900E8A7F1 /* DetailDescription */ = {
+			isa = PBXGroup;
+			children = (
+				A7835767179447F500E8A7F1 /* DetailMethodDescriptionVC.h */,
+				A7835768179447F500E8A7F1 /* DetailMethodDescriptionVC.m */,
+			);
+			name = DetailDescription;
+			sourceTree = "<group>";
+		};
 		A7A03D68178DB7100070405B /* CreateOwnVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +186,7 @@
 		A7A03D6D178DB9320070405B /* MethodsListVC */ = {
 			isa = PBXGroup;
 			children = (
+				A7835766179447C900E8A7F1 /* DetailDescription */,
 				A7A03DD6179140F70070405B /* MethodsListVC.h */,
 				A7A03DD7179140F70070405B /* MethodsListVC.m */,
 			);
@@ -263,6 +276,7 @@
 				A7A03E15179157B40070405B /* Get_Energy.xcdatamodeld in Sources */,
 				A7A03E1A17915B540070405B /* GE_Method.m in Sources */,
 				A7A03E1B17915B570070405B /* _GE_Method.m in Sources */,
+				A7835769179447F500E8A7F1 /* DetailMethodDescriptionVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

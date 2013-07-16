@@ -13,6 +13,7 @@
 #import <NSManagedObjectContext+MagicalSaves.h>
 #import <NSManagedObject+MagicalRecord.h>
 #import <NSManagedObject+MagicalDataImport.h>
+#import "DetailMethodDescriptionVC.h"
 
 @interface MethodsListVC ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -74,6 +75,8 @@
 }
 
 
+
+
 ////////////////////////////////////////////////////////////////////////
 #pragma mark - table view
 ////////////////////////////////////////////////////////////////////////
@@ -89,5 +92,27 @@
 //==============================================================================
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.fetchedResultController.fetchedObjects.count;
+}
+
+
+//==============================================================================
+//- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    NSLog(@"indexPath = %@", indexPath);
+//    return indexPath;
+//}
+//
+//
+////==============================================================================
+//- (NSIndexPath *)tableView:(UITableView *)tableView willDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    NSLog(@"indexPath = %@", indexPath);
+//    return indexPath;
+//}
+
+//==============================================================================
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    DetailMethodDescriptionVC *vc = [[DetailMethodDescriptionVC alloc] initDetailControllerWithMethod:[self.fetchedResultController objectAtIndexPath:indexPath]];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end
