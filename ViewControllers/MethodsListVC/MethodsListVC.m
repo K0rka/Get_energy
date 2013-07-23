@@ -43,13 +43,14 @@
     
     NSString *placesPath = [[NSBundle mainBundle] pathForResource:@"methods" ofType:@"json"];
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:placesPath] options:0 error:nil];
-//    NSArray *arrayOfMethods = [placesJSON ]
-    
-//    id methodsArray = [GE_Method MR_importFromArray:[dict valueForKey:@"methods"]];//[GE_Method MR_importFromObject:[[dict valueForKey:@"methods"] objectAtIndex:0]];
-    
+
+#warning Move to app delegate and do it only ince per each app
+    //Parse json and save to persistent store 
     for (id nextObject in [dict valueForKey:@"methods"]) {
-        id method = [GE_Method MR_importFromObject:nextObject];
+        id method = [GE_Method MR_importFromObject:nextObject inContext:self.managedObjectContext];
     }
+    //save context with new objects
+    [self.managedObjectContext save:nil];
     
     //create frc, clear its cache
     NSFetchRequest *requestForFRC = [GE_Method MR_requestAll];

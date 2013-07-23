@@ -9,7 +9,7 @@
 #import "DetailMethodDescriptionVC.h"
 #import "GE_Method.h"
 #import "SharedObjectsDescriptions.h"
-
+#import "MethodDescriptionCell.h"
 
 @interface DetailMethodDescriptionVC () <UITableViewDataSource, UITableViewDelegate> {
     GE_Method *_currentMethod;
@@ -54,7 +54,7 @@
                    @"peopleNumber",
                    @"preparedList"];
     
-    
+    [self.tableView registerNib:[UINib nibWithNibName:@"MethodDescriptionCell" bundle:nil] forCellReuseIdentifier:@"MethodDescriptionCell"];
     [self configureStructureOfTableWithMethod:_currentMethod];
     
 }
@@ -77,14 +77,30 @@
     return _currentMethodDescriptionArray.count;
 }
 
+//==============================================================================
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([[_currentMethodDescriptionArray objectAtIndex:indexPath.row] isEqual:@"methodDescription"]) {
+        return [MethodDescriptionCell cellHeightWithData:[_currentMethod valueForKey:[_currentMethodDescriptionArray objectAtIndex:indexPath.row]]];
+    }
+    return 44;
+}
+
 
 //==============================================================================
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DetailCell"];
     
     id nextVal = [_currentMethod valueForKey:[_currentMethodDescriptionArray objectAtIndex:indexPath.row]];
+
+    if ([[_currentMethodDescriptionArray objectAtIndex:indexPath.row] isEqual:@"methodDescription"]) {
+        MethodDescriptionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"MethodDescriptionCell"];
+        [cell.descriptionLabel setText:nextVal ];
+        return cell;
+    }
     
-    cell.textLabel.text = [nextVal isKindOfClass:[NSString class]]? nextVal : [NSString stringWithFormat:@"%@", nextVal ];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DetailCell"];
+    
+    
+    cell.textLabel.text = [nextVal isKindOfClass:[NSString class]]? nextVal  : [NSString stringWithFormat:@"%@", nextVal ];
     
     return cell;
 }

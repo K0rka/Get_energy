@@ -11,6 +11,8 @@
 		A70B33DB17832A9900EE9D93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70B33DA17832A9900EE9D93 /* Foundation.framework */; };
 		A70B33DD17832A9900EE9D93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70B33DC17832A9900EE9D93 /* CoreGraphics.framework */; };
 		A70B33DF17832A9900EE9D93 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70B33DE17832A9900EE9D93 /* CoreData.framework */; };
+		A718A22C179ED50C0047D230 /* MethodDescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A718A22B179ED50C0047D230 /* MethodDescriptionCell.m */; };
+		A718A22E179ED55A0047D230 /* MethodDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A718A22D179ED55A0047D230 /* MethodDescriptionCell.xib */; };
 		A7835769179447F500E8A7F1 /* DetailMethodDescriptionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7835768179447F500E8A7F1 /* DetailMethodDescriptionVC.m */; };
 		A7A03DF6179145630070405B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7A03DF0179145630070405B /* InfoPlist.strings */; };
 		A7A03DF7179145630070405B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7A03DF2179145630070405B /* MainStoryboard_iPad.storyboard */; };
@@ -33,6 +35,11 @@
 		A70B33DA17832A9900EE9D93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A70B33DC17832A9900EE9D93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A70B33DE17832A9900EE9D93 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A718A1BB179E57FB0047D230 /* DefaultKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultKeys.h; sourceTree = "<group>"; };
+		A718A1BE179E5B380047D230 /* CellHeightProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellHeightProtocol.h; sourceTree = "<group>"; };
+		A718A22A179ED50C0047D230 /* MethodDescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodDescriptionCell.h; sourceTree = "<group>"; };
+		A718A22B179ED50C0047D230 /* MethodDescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodDescriptionCell.m; sourceTree = "<group>"; };
+		A718A22D179ED55A0047D230 /* MethodDescriptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MethodDescriptionCell.xib; sourceTree = "<group>"; };
 		A7835767179447F500E8A7F1 /* DetailMethodDescriptionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailMethodDescriptionVC.h; path = ViewControllers/MethodsListVC/DetailDescription/DetailMethodDescriptionVC.h; sourceTree = SOURCE_ROOT; };
 		A7835768179447F500E8A7F1 /* DetailMethodDescriptionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailMethodDescriptionVC.m; path = ViewControllers/MethodsListVC/DetailDescription/DetailMethodDescriptionVC.m; sourceTree = SOURCE_ROOT; };
 		A783576E1795165700E8A7F1 /* SharedNotificationsName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedNotificationsName.h; sourceTree = "<group>"; };
@@ -158,9 +165,37 @@
 			path = Method;
 			sourceTree = "<group>";
 		};
+		A718A1BD179E5B380047D230 /* SharedProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				A718A1BE179E5B380047D230 /* CellHeightProtocol.h */,
+			);
+			path = SharedProtocols;
+			sourceTree = "<group>";
+		};
+		A718A228179ED4EA0047D230 /* DetailDescriptionCells */ = {
+			isa = PBXGroup;
+			children = (
+				A718A229179ED4EA0047D230 /* DescriptionCell */,
+			);
+			name = DetailDescriptionCells;
+			path = ViewControllers/MethodsListVC/DetailDescription/DetailDescriptionCells;
+			sourceTree = SOURCE_ROOT;
+		};
+		A718A229179ED4EA0047D230 /* DescriptionCell */ = {
+			isa = PBXGroup;
+			children = (
+				A718A22A179ED50C0047D230 /* MethodDescriptionCell.h */,
+				A718A22B179ED50C0047D230 /* MethodDescriptionCell.m */,
+				A718A22D179ED55A0047D230 /* MethodDescriptionCell.xib */,
+			);
+			path = DescriptionCell;
+			sourceTree = "<group>";
+		};
 		A7835766179447C900E8A7F1 /* DetailDescription */ = {
 			isa = PBXGroup;
 			children = (
+				A718A228179ED4EA0047D230 /* DetailDescriptionCells */,
 				A7835767179447F500E8A7F1 /* DetailMethodDescriptionVC.h */,
 				A7835768179447F500E8A7F1 /* DetailMethodDescriptionVC.m */,
 			);
@@ -172,6 +207,8 @@
 			children = (
 				A783576E1795165700E8A7F1 /* SharedNotificationsName.h */,
 				A783576F1795167600E8A7F1 /* SharedObjectsDescriptions.h */,
+				A718A1BB179E57FB0047D230 /* DefaultKeys.h */,
+				A718A1BD179E5B380047D230 /* SharedProtocols */,
 			);
 			path = SharedObjects;
 			sourceTree = SOURCE_ROOT;
@@ -270,6 +307,7 @@
 				A7A03DF7179145630070405B /* MainStoryboard_iPad.storyboard in Resources */,
 				A7A03DF8179145630070405B /* MainStoryboard_iPhone.storyboard in Resources */,
 				A7A03E3B179167350070405B /* methods.json in Resources */,
+				A718A22E179ED55A0047D230 /* MethodDescriptionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +327,7 @@
 				A7A03E1A17915B540070405B /* GE_Method.m in Sources */,
 				A7A03E1B17915B570070405B /* _GE_Method.m in Sources */,
 				A7835769179447F500E8A7F1 /* DetailMethodDescriptionVC.m in Sources */,
+				A718A22C179ED50C0047D230 /* MethodDescriptionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
