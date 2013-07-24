@@ -45,6 +45,8 @@
     //Set title of new controller
     self.title = [_currentMethod.title capitalizedString];
     
+    
+    //Table view settings
     _ge_method = @[@"title",
                    @"star",
                    @"cost",
@@ -79,8 +81,11 @@
 
 //==============================================================================
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //data that will be shown in cell with that indexPath
+    id dataForCell = [_currentMethod valueForKey:[_currentMethodDescriptionArray objectAtIndex:indexPath.row]];
+    
     if ([[_currentMethodDescriptionArray objectAtIndex:indexPath.row] isEqual:@"methodDescription"]) {
-        return [MethodDescriptionCell cellHeightWithData:[_currentMethod valueForKey:[_currentMethodDescriptionArray objectAtIndex:indexPath.row]]];
+        return [MethodDescriptionCell cellHeightWithData:dataForCell];
     }
     return 44;
 }
@@ -91,17 +96,18 @@
     
     id nextVal = [_currentMethod valueForKey:[_currentMethodDescriptionArray objectAtIndex:indexPath.row]];
 
+    //Description Cell
     if ([[_currentMethodDescriptionArray objectAtIndex:indexPath.row] isEqual:@"methodDescription"]) {
         MethodDescriptionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"MethodDescriptionCell"];
         [cell.descriptionLabel setText:nextVal ];
         return cell;
     }
     
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DetailCell"];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DetailCell"];
     
     
-    cell.textLabel.text = [nextVal isKindOfClass:[NSString class]]? nextVal  : [NSString stringWithFormat:@"%@", nextVal ];
-    
+    cell.textLabel.text = [_currentMethodDescriptionArray objectAtIndex:indexPath.row];
+    cell.detailTextLabel.text = [nextVal isKindOfClass:[NSString class]]? nextVal  : [NSString stringWithFormat:@"%@", nextVal ];
     return cell;
 }
 
@@ -120,5 +126,12 @@
             [_currentMethodDescriptionArray addObject:nextKey];
         }
     }
+}
+
+
+////////////////////////////////////////////////////////////////////////
+#pragma mark - User Actions
+////////////////////////////////////////////////////////////////////////
+- (IBAction)editCurrentMethod:(id)sender {
 }
 @end

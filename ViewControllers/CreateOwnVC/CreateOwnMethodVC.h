@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GE_Method.h"
+#import "NSString+StringAdditions.h"
 
 @interface CreateOwnMethodVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
 

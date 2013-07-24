@@ -132,7 +132,13 @@
                             <constraint firstItem="lNL-Un-Vcu" firstAttribute="top" secondItem="qCu-rx-lj9" secondAttribute="top" type="default" id="zQC-0K-bbp"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cbM-o8-L1p"/>
+                    <navigationItem key="navigationItem" id="cbM-o8-L1p">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="QjD-e3-WTc">
+                            <connections>
+                                <action selector="editCurrentMethod:" destination="Nuf-7z-9cH" id="u7Q-Zl-pol"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="lNL-Un-Vcu" id="q01-Ol-ljR"/>
                     </connections>
@@ -163,32 +169,6 @@
             <point key="canvasLocation" x="240" y="78"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="CreateOwnMethodVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreateOwnMethodVC.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="DetailMethodDescriptionVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailMethodDescriptionVC.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="MasterViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
-        </class>
-        <class className="MethodsListVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MethodsListVC.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

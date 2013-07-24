@@ -10,6 +10,16 @@
 
 @implementation GE_Method
 
-// Custom logic goes here.
+//==============================================================================
++ (NSArray *) methodAttributes {
+    return  @[@"cost",
+              @"duration",
+              @"methodDescription",
+              @"peopleNumber",
+              @"place",
+              @"preparedList",
+              @"star",
+              @"title"];
+}
 
 @end

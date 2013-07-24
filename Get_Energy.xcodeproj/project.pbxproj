@@ -13,6 +13,10 @@
 		A70B33DF17832A9900EE9D93 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70B33DE17832A9900EE9D93 /* CoreData.framework */; };
 		A718A22C179ED50C0047D230 /* MethodDescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A718A22B179ED50C0047D230 /* MethodDescriptionCell.m */; };
 		A718A22E179ED55A0047D230 /* MethodDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A718A22D179ED55A0047D230 /* MethodDescriptionCell.xib */; };
+		A718A232179FAA950047D230 /* NSString+StringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A718A231179FAA950047D230 /* NSString+StringAdditions.m */; };
+		A718A236179FAD8D0047D230 /* CreateOwnMethodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A718A235179FAD8D0047D230 /* CreateOwnMethodVC.m */; };
+		A718A23B179FAEAB0047D230 /* CreateOwnMethodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A718A23A179FAEAB0047D230 /* CreateOwnMethodCell.m */; };
+		A718A23D179FAEC00047D230 /* CreateOwnMethodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A718A23C179FAEC00047D230 /* CreateOwnMethodCell.xib */; };
 		A7835769179447F500E8A7F1 /* DetailMethodDescriptionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7835768179447F500E8A7F1 /* DetailMethodDescriptionVC.m */; };
 		A7A03DF6179145630070405B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7A03DF0179145630070405B /* InfoPlist.strings */; };
 		A7A03DF7179145630070405B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7A03DF2179145630070405B /* MainStoryboard_iPad.storyboard */; };
@@ -20,7 +24,6 @@
 		A7A03DF9179145930070405B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03DD3179140C50070405B /* main.m */; };
 		A7A03DFA179145BA0070405B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03DC7179140960070405B /* AppDelegate.m */; };
 		A7A03DFB179145BD0070405B /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03DC9179140960070405B /* MasterViewController.m */; };
-		A7A03DFC179145C30070405B /* CreateOwnMethodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03DD5179140ED0070405B /* CreateOwnMethodVC.m */; };
 		A7A03DFD179145C60070405B /* MethodsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03DD7179140F70070405B /* MethodsListVC.m */; };
 		A7A03E05179149A80070405B /* libMagicalRecord-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A03E04179149A80070405B /* libMagicalRecord-iOS.a */; };
 		A7A03E15179157B40070405B /* Get_Energy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7A03E13179157B40070405B /* Get_Energy.xcdatamodeld */; };
@@ -40,6 +43,13 @@
 		A718A22A179ED50C0047D230 /* MethodDescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodDescriptionCell.h; sourceTree = "<group>"; };
 		A718A22B179ED50C0047D230 /* MethodDescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodDescriptionCell.m; sourceTree = "<group>"; };
 		A718A22D179ED55A0047D230 /* MethodDescriptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MethodDescriptionCell.xib; sourceTree = "<group>"; };
+		A718A230179FAA950047D230 /* NSString+StringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+StringAdditions.h"; path = "Categories/NSString+StringAdditions.h"; sourceTree = "<group>"; };
+		A718A231179FAA950047D230 /* NSString+StringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+StringAdditions.m"; path = "Categories/NSString+StringAdditions.m"; sourceTree = "<group>"; };
+		A718A234179FAD8D0047D230 /* CreateOwnMethodVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateOwnMethodVC.h; sourceTree = "<group>"; };
+		A718A235179FAD8D0047D230 /* CreateOwnMethodVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateOwnMethodVC.m; sourceTree = "<group>"; };
+		A718A239179FAEAB0047D230 /* CreateOwnMethodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateOwnMethodCell.h; sourceTree = "<group>"; };
+		A718A23A179FAEAB0047D230 /* CreateOwnMethodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateOwnMethodCell.m; sourceTree = "<group>"; };
+		A718A23C179FAEC00047D230 /* CreateOwnMethodCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateOwnMethodCell.xib; sourceTree = "<group>"; };
 		A7835767179447F500E8A7F1 /* DetailMethodDescriptionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailMethodDescriptionVC.h; path = ViewControllers/MethodsListVC/DetailDescription/DetailMethodDescriptionVC.h; sourceTree = SOURCE_ROOT; };
 		A7835768179447F500E8A7F1 /* DetailMethodDescriptionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailMethodDescriptionVC.m; path = ViewControllers/MethodsListVC/DetailDescription/DetailMethodDescriptionVC.m; sourceTree = SOURCE_ROOT; };
 		A783576E1795165700E8A7F1 /* SharedNotificationsName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedNotificationsName.h; sourceTree = "<group>"; };
@@ -54,8 +64,6 @@
 		A7A03DD1179140C50070405B /* Get_Energy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Get_Energy-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A7A03DD2179140C50070405B /* Get_Energy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Get_Energy-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		A7A03DD3179140C50070405B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
-		A7A03DD4179140ED0070405B /* CreateOwnMethodVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CreateOwnMethodVC.h; path = CreateOwnVC/CreateOwnMethodVC.h; sourceTree = SOURCE_ROOT; };
-		A7A03DD5179140ED0070405B /* CreateOwnMethodVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CreateOwnMethodVC.m; path = CreateOwnVC/CreateOwnMethodVC.m; sourceTree = SOURCE_ROOT; };
 		A7A03DD6179140F70070405B /* MethodsListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MethodsListVC.h; path = ViewControllers/MethodsListVC/MethodsListVC.h; sourceTree = SOURCE_ROOT; };
 		A7A03DD7179140F70070405B /* MethodsListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MethodsListVC.m; path = ViewControllers/MethodsListVC/MethodsListVC.m; sourceTree = SOURCE_ROOT; };
 		A7A03DF1179145630070405B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -192,6 +200,44 @@
 			path = DescriptionCell;
 			sourceTree = "<group>";
 		};
+		A718A22F179FAA6D0047D230 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A718A230179FAA950047D230 /* NSString+StringAdditions.h */,
+				A718A231179FAA950047D230 /* NSString+StringAdditions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		A718A233179FAD8D0047D230 /* CreateOwnVC */ = {
+			isa = PBXGroup;
+			children = (
+				A718A238179FAE960047D230 /* CreateOwnCells */,
+				A718A234179FAD8D0047D230 /* CreateOwnMethodVC.h */,
+				A718A235179FAD8D0047D230 /* CreateOwnMethodVC.m */,
+			);
+			name = CreateOwnVC;
+			path = ViewControllers/CreateOwnVC;
+			sourceTree = SOURCE_ROOT;
+		};
+		A718A237179FADA40047D230 /* SettingsVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SettingsVC;
+			path = ViewControllers/SettingsVC;
+			sourceTree = SOURCE_ROOT;
+		};
+		A718A238179FAE960047D230 /* CreateOwnCells */ = {
+			isa = PBXGroup;
+			children = (
+				A718A239179FAEAB0047D230 /* CreateOwnMethodCell.h */,
+				A718A23A179FAEAB0047D230 /* CreateOwnMethodCell.m */,
+				A718A23C179FAEC00047D230 /* CreateOwnMethodCell.xib */,
+			);
+			path = CreateOwnCells;
+			sourceTree = "<group>";
+		};
 		A7835766179447C900E8A7F1 /* DetailDescription */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +251,7 @@
 		A783576D1795165700E8A7F1 /* SharedObjects */ = {
 			isa = PBXGroup;
 			children = (
+				A718A22F179FAA6D0047D230 /* Categories */,
 				A783576E1795165700E8A7F1 /* SharedNotificationsName.h */,
 				A783576F1795167600E8A7F1 /* SharedObjectsDescriptions.h */,
 				A718A1BB179E57FB0047D230 /* DefaultKeys.h */,
@@ -213,20 +260,11 @@
 			path = SharedObjects;
 			sourceTree = SOURCE_ROOT;
 		};
-		A7A03D68178DB7100070405B /* CreateOwnVC */ = {
-			isa = PBXGroup;
-			children = (
-				A7A03DD4179140ED0070405B /* CreateOwnMethodVC.h */,
-				A7A03DD5179140ED0070405B /* CreateOwnMethodVC.m */,
-			);
-			name = CreateOwnVC;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		A7A03D6C178DB9320070405B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A7A03D68178DB7100070405B /* CreateOwnVC */,
+				A718A237179FADA40047D230 /* SettingsVC */,
+				A718A233179FAD8D0047D230 /* CreateOwnVC */,
 				A7A03D6D178DB9320070405B /* MethodsListVC */,
 			);
 			path = ViewControllers;
@@ -308,6 +346,7 @@
 				A7A03DF8179145630070405B /* MainStoryboard_iPhone.storyboard in Resources */,
 				A7A03E3B179167350070405B /* methods.json in Resources */,
 				A718A22E179ED55A0047D230 /* MethodDescriptionCell.xib in Resources */,
+				A718A23D179FAEC00047D230 /* CreateOwnMethodCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,13 +360,15 @@
 				A7A03DF9179145930070405B /* main.m in Sources */,
 				A7A03DFA179145BA0070405B /* AppDelegate.m in Sources */,
 				A7A03DFB179145BD0070405B /* MasterViewController.m in Sources */,
-				A7A03DFC179145C30070405B /* CreateOwnMethodVC.m in Sources */,
 				A7A03DFD179145C60070405B /* MethodsListVC.m in Sources */,
 				A7A03E15179157B40070405B /* Get_Energy.xcdatamodeld in Sources */,
 				A7A03E1A17915B540070405B /* GE_Method.m in Sources */,
 				A7A03E1B17915B570070405B /* _GE_Method.m in Sources */,
 				A7835769179447F500E8A7F1 /* DetailMethodDescriptionVC.m in Sources */,
 				A718A22C179ED50C0047D230 /* MethodDescriptionCell.m in Sources */,
+				A718A232179FAA950047D230 /* NSString+StringAdditions.m in Sources */,
+				A718A236179FAD8D0047D230 /* CreateOwnMethodVC.m in Sources */,
+				A718A23B179FAEAB0047D230 /* CreateOwnMethodCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
