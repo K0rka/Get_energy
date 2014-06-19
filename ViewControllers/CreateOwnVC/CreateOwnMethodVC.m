@@ -9,20 +9,22 @@
 #import "CreateOwnMethodVC.h"
 #import "CreateOwnMethodCell.h"
 
-@interface CreateOwnMethodVC ()
+@interface CreateOwnMethodVC () {
+    GE_Method *_currentMethod;
+}
 
 @end
 
 @implementation CreateOwnMethodVC
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+- (id) initWithExistringMethod:(GE_Method *)method {
+    self = [self initWithNibName:nil bundle:nil];
     if (self) {
-        // Custom initialization
+        _currentMethod = method;
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {

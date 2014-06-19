@@ -10,6 +10,7 @@
 
 #import <NSManagedObjectContext+MagicalRecord.h>
 
+
 @interface MasterViewController ()
 //- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end

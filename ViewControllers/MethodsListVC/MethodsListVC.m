@@ -14,8 +14,13 @@
 #import <NSManagedObject+MagicalRecord.h>
 #import <NSManagedObject+MagicalDataImport.h>
 #import "DetailMethodDescriptionVC.h"
+#import "ItemCell.h"
+#import "UIAlertView+Blocks.h"
+#import "CreateOwnMethodVC.h"
 
-@interface MethodsListVC ()
+@interface MethodsListVC () <ItemCellDelegate>{
+    ItemCell *_selectedCell;
+}
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -66,6 +71,8 @@
     
     
     [self.fetchedResultController performFetch:nil];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"ItemCell" bundle:nil] forCellReuseIdentifier:@"ItemCell"];
 
 }
 
@@ -82,13 +89,15 @@
 #pragma mark - table view
 ////////////////////////////////////////////////////////////////////////
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"NewCell"];
+    ItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ItemCell"];//[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"NewCell"];
     
     GE_Method *current = [self.fetchedResultController objectAtIndexPath:indexPath];
     [cell.textLabel setText:current.title];
+    cell.delegate = self;
+    UILongPressGestureRecognizer *rcgn = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(didLongPressOnCell:)];
     
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    [cell addGestureRecognizer:rcgn];
     return  cell;
 }
 
@@ -105,5 +114,51 @@
     DetailMethodDescriptionVC *vc = [[DetailMethodDescriptionVC alloc] initDetailControllerWithMethod:[self.fetchedResultController objectAtIndexPath:indexPath]];
     
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [_selectedCell.additionalView setHidden:YES];
+    _selectedCell = nil;
+}
+
+
+- (void)didLongPressOnCell:(UILongPressGestureRecognizer *)rcg {
+    [_selectedCell.additionalView setHidden:YES];
+    ItemCell *cell = rcg.view;
+    _selectedCell = cell;
+    [cell.additionalView setHidden:NO];
+}
+
+
+#pragma - ItemCellDelegate
+- (void) onDontPressed:(ItemCell *)cell {
+    
+    RIButtonItem *okItem =[RIButtonItem itemWithLabel:NSLocalizedString(@"OK", nil) action:^{
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        GE_Method *current = [self.fetchedResultController objectAtIndexPath:indexPath];
+        [[NSManagedObjectContext MR_context] deleteObject:current];
+        [[NSManagedObjectContext MR_context] save:nil];
+        
+    }];
+    RIButtonItem *cancelItem = [RIButtonItem itemWithLabel:NSLocalizedString(@"Cancel", nil)];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Confirmation", nil) message:NSLocalizedString(@"_are_you_shure", nil) cancelButtonItem:cancelItem otherButtonItems:okItem, nil];
+    [alert show];
+    
+}
+
+- (void) onEditPressed:(ItemCell *)cell {
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    GE_Method *current = [self.fetchedResultController objectAtIndexPath:indexPath];
+    CreateOwnMethodVC *vc = [[CreateOwnMethodVC alloc] initWithExistringMethod:current];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void) onDonePressed:(ItemCell *)cell {
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    GE_Method *current = [self.fetchedResultController objectAtIndexPath:indexPath];
+    current.doneCountValue ++;
+    [[NSManagedObjectContext MR_context] save:nil];
 }
 @end

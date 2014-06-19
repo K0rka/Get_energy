@@ -12,6 +12,8 @@
 
 @interface CreateOwnMethodVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+- (id) initWithExistringMethod:(GE_Method *)method;
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

@@ -66,7 +66,16 @@ const struct GE_MethodFetchedProperties GE_MethodFetchedProperties = {
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
-
+    if ([key isEqualToString:@"doneCountValue"]) {
+        NSSet *affectingKey = [NSSet setWithObject:@"doneCount"];
+        keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+        return keyPaths;
+    }
+    if ([key isEqualToString:@"maxDoneCountValue"]) {
+        NSSet *affectingKey = [NSSet setWithObject:@"maxDoneCount"];
+        keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+        return keyPaths;
+    }
 	return keyPaths;
 }
 
@@ -155,7 +164,47 @@ const struct GE_MethodFetchedProperties GE_MethodFetchedProperties = {
 }
 
 
+@dynamic doneCount;
 
+- (int32_t)doneCountValue {
+    NSNumber *result = [self doneCount];
+    return [result intValue];
+}
+
+- (void)setDoneCountValue:(int32_t)value_ {
+    [self setDoneCount:[NSNumber numberWithInt:value_]];
+}
+
+- (int32_t)primitiveDoneCountValue {
+    NSNumber *result = [self primitiveDoneCount];
+    return [result intValue];
+}
+
+- (void)setPrimitiveDoneCountValue:(int32_t)value_ {
+    [self setPrimitiveDoneCount:[NSNumber numberWithInt:value_]];
+}
+
+
+
+@dynamic maxDoneCount;
+
+- (int32_t)maxDoneCountValue {
+    NSNumber *result = [self maxDoneCount];
+    return [result intValue];
+}
+
+- (void)setMaxDoneCountValue:(int32_t)value_ {
+    [self setMaxDoneCount:[NSNumber numberWithInt:value_]];
+}
+
+- (int32_t)primitiveMaxDoneCountValue {
+    NSNumber *result = [self primitiveMaxDoneCount];
+    return [result intValue];
+}
+
+- (void)setPrimitiveMaxDoneCountValue:(int32_t)value_ {
+    [self setPrimitiveMaxDoneCount:[NSNumber numberWithInt:value_]];
+}
 
 
 @dynamic place;

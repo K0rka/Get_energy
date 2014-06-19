@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:MagicalRecord/Project Files/MagicalRecord.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "container:Get_Energy.xcodeproj">
    </FileRef>
 </Workspace>

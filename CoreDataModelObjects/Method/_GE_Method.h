@@ -92,6 +92,24 @@ extern const struct GE_MethodFetchedProperties {
 //- (BOOL)validatePeopleNumber:(id*)value_ error:(NSError**)error_;
 
 
+@property (nonatomic, strong) NSNumber* doneCount;
+
+
+
+@property int32_t doneCountValue;
+- (int32_t)doneCountValue;
+- (void)setDoneCountValue:(int32_t)doneCountValue;
+
+
+
+
+@property (nonatomic, strong) NSNumber* maxDoneCount;
+
+
+
+@property int32_t maxDoneCountValue;
+- (int32_t)maxDoneCountValue;
+- (void)setMaxDoneCountValue:(int32_t)doneCountValue;
 
 
 
@@ -180,6 +198,19 @@ extern const struct GE_MethodFetchedProperties {
 - (void)setPrimitivePeopleNumberValue:(int32_t)value_;
 
 
+- (NSNumber*)primitiveDoneCount;
+- (void)setPrimitiveDoneCount:(NSNumber*)value;
+
+- (int32_t)primitiveDoneCountValue;
+- (void)setPrimitiveDoneCountValue:(int32_t)value_;
+
+
+
+- (NSNumber*)primitiveMaxDoneCount;
+- (void)setPrimitiveMaxDoneCount:(NSNumber*)value;
+
+- (int32_t)primitiveMaxDoneCountValue;
+- (void)setPrimitiveMaxDoneCountValue:(int32_t)value_;
 
 
 - (NSString*)primitivePlace;
