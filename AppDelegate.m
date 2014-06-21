@@ -19,6 +19,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+//    self.managedObjectContext = [NSManagedObjectContext MR_context];
+    
+    
+    NSString *placesPath = [[NSBundle mainBundle] pathForResource:@"methods" ofType:@"json"];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:placesPath] options:0 error:nil];
+    
+    //#warning Move to app delegate and do it only ince per each app
+    //    //Parse json and save to persistent store
+    //    for (id nextObject in [dict valueForKey:@"methods"]) {
+    //        id method = [GE_Method MR_importFromObject:nextObject inContext:self.managedObjectContext];
+    //    }
+    //    //save context with new objects
+    //    [self.managedObjectContext MR_saveToPersistentStoreAndWait];
+    
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
@@ -36,6 +51,8 @@
         MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
         controller.managedObjectContext = self.managedObjectContext;
     }
+    
+    
     return YES;
 }
 							

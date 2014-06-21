@@ -44,24 +44,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-//    [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self
-//                                                                                                                  action:@selector(addNewMethod:)]];
-//    [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(onEditFilterPressed:)]];
-    
-    self.managedObjectContext = [NSManagedObjectContext MR_context];
-    
-    
-    NSString *placesPath = [[NSBundle mainBundle] pathForResource:@"methods" ofType:@"json"];
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:placesPath] options:0 error:nil];
-
-//#warning Move to app delegate and do it only ince per each app
-//    //Parse json and save to persistent store 
-//    for (id nextObject in [dict valueForKey:@"methods"]) {
-//        id method = [GE_Method MR_importFromObject:nextObject inContext:self.managedObjectContext];
-//    }
-//    //save context with new objects
-//    [self.managedObjectContext MR_saveToPersistentStoreAndWait];
-    
     //create frc, clear its cache
     NSFetchRequest *requestForFRC = [GE_Method MR_requestAll];
     NSSortDescriptor *sortDescriptorForFRC = [NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES];
