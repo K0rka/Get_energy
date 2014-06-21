@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25EAB4C05E3B4CE9A1DE7EF2 /* libPods-Get_Energy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 885EE7E82DA246E1941FD506 /* libPods-Get_Energy.a */; };
 		353A9AD4194E172900AF7F77 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 353A9AD2194E172900AF7F77 /* ItemCell.m */; };
 		353A9AD5194E172900AF7F77 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 353A9AD3194E172900AF7F77 /* ItemCell.xib */; };
 		356908CA1952B036003C802F /* Get_Energy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 356908C81952B036003C802F /* Get_Energy.xcdatamodeld */; };
+		35E2D9751955CCA600229B9B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E2D9741955CCA600229B9B /* Default-568h@2x.png */; };
 		35FCE8E4195162CA00938487 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 35FCE8DB195162CA00938487 /* LICENSE */; };
 		35FCE8E5195162CA00938487 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 35FCE8DC195162CA00938487 /* README.md */; };
 		35FCE8E6195162CA00938487 /* RIButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FCE8DE195162CA00938487 /* RIButtonItem.m */; };
@@ -34,49 +36,17 @@
 		A7A03DFA179145BA0070405B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03DC7179140960070405B /* AppDelegate.m */; };
 		A7A03DFB179145BD0070405B /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03DC9179140960070405B /* MasterViewController.m */; };
 		A7A03DFD179145C60070405B /* MethodsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03DD7179140F70070405B /* MethodsListVC.m */; };
-		A7A03E05179149A80070405B /* libMagicalRecord-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A03E04179149A80070405B /* libMagicalRecord-iOS.a */; };
 		A7A03E1A17915B540070405B /* GE_Method.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03E19179159CB0070405B /* GE_Method.m */; };
 		A7A03E1B17915B570070405B /* _GE_Method.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03E17179159CB0070405B /* _GE_Method.m */; };
 		A7A03E3B179167350070405B /* methods.json in Resources */ = {isa = PBXBuildFile; fileRef = A7A03E3A179167340070405B /* methods.json */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		353A9AC7194E15E200AF7F77 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 353A9ABF194E15E200AF7F77 /* MagicalRecord.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C7CF97AB17498414008D9D13;
-			remoteInfo = "libMagicalRecord-iOS";
-		};
-		353A9AC9194E15E200AF7F77 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 353A9ABF194E15E200AF7F77 /* MagicalRecord.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C7CF97BB1749843F008D9D13;
-			remoteInfo = "libMagicalRecord-OSX";
-		};
-		353A9ACB194E15E200AF7F77 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 353A9ABF194E15E200AF7F77 /* MagicalRecord.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C7CF97FF174984CA008D9D13;
-			remoteInfo = "MagicalRecordTests-iOS";
-		};
-		353A9ACD194E15E200AF7F77 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 353A9ABF194E15E200AF7F77 /* MagicalRecord.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C7CF9816174984E4008D9D13;
-			remoteInfo = "MagicalRecordTests-OSX";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		353A9ABF194E15E200AF7F77 /* MagicalRecord.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MagicalRecord.xcodeproj; path = "MagicalRecord-develop/MagicalRecord.xcodeproj"; sourceTree = "<group>"; };
 		353A9AD1194E172900AF7F77 /* ItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemCell.h; path = ItemCell/ItemCell.h; sourceTree = SOURCE_ROOT; };
 		353A9AD2194E172900AF7F77 /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemCell.m; path = ItemCell/ItemCell.m; sourceTree = SOURCE_ROOT; };
 		353A9AD3194E172900AF7F77 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemCell.xib; path = ItemCell/ItemCell.xib; sourceTree = SOURCE_ROOT; };
 		356908C91952B036003C802F /* Get_Energy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Get_Energy.xcdatamodel; sourceTree = "<group>"; };
+		35E2D9741955CCA600229B9B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		35FCE8DB195162CA00938487 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		35FCE8DC195162CA00938487 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		35FCE8DD195162CA00938487 /* RIButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIButtonItem.h; sourceTree = "<group>"; };
@@ -86,6 +56,7 @@
 		35FCE8E1195162CA00938487 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
 		35FCE8E2195162CA00938487 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
 		35FCE8E3195162CA00938487 /* UIAlertView-Blocks.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIAlertView-Blocks.podspec"; sourceTree = "<group>"; };
+		885EE7E82DA246E1941FD506 /* libPods-Get_Energy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Get_Energy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70B33D517832A9900EE9D93 /* Get_Energy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Get_Energy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70B33D817832A9900EE9D93 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A70B33DA17832A9900EE9D93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -111,7 +82,6 @@
 		A7A03DC7179140960070405B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		A7A03DC8179140960070405B /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = SOURCE_ROOT; };
 		A7A03DC9179140960070405B /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = SOURCE_ROOT; };
-		A7A03DCE179140C50070405B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		A7A03DCF179140C50070405B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		A7A03DD0179140C50070405B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = SOURCE_ROOT; };
 		A7A03DD1179140C50070405B /* Get_Energy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Get_Energy-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -122,12 +92,12 @@
 		A7A03DF1179145630070405B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		A7A03DF3179145630070405B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		A7A03DF5179145630070405B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		A7A03E04179149A80070405B /* libMagicalRecord-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libMagicalRecord-iOS.a"; path = "MagicalRecord/Project Files/build/Release-iphoneos/libMagicalRecord-iOS.a"; sourceTree = "<group>"; };
 		A7A03E16179159CB0070405B /* _GE_Method.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = _GE_Method.h; path = CoreDataModelObjects/Method/_GE_Method.h; sourceTree = SOURCE_ROOT; };
 		A7A03E17179159CB0070405B /* _GE_Method.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = _GE_Method.m; path = CoreDataModelObjects/Method/_GE_Method.m; sourceTree = SOURCE_ROOT; };
 		A7A03E18179159CB0070405B /* GE_Method.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GE_Method.h; path = CoreDataModelObjects/Method/GE_Method.h; sourceTree = SOURCE_ROOT; };
 		A7A03E19179159CB0070405B /* GE_Method.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GE_Method.m; path = CoreDataModelObjects/Method/GE_Method.m; sourceTree = SOURCE_ROOT; };
 		A7A03E3A179167340070405B /* methods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = methods.json; path = CoreDataModelObjects/methods.json; sourceTree = SOURCE_ROOT; };
+		ADFBE17D07AA4528BF11C506 /* Pods-Get_Energy.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get_Energy.xcconfig"; path = "Pods/Pods-Get_Energy.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,28 +105,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7A03E05179149A80070405B /* libMagicalRecord-iOS.a in Frameworks */,
 				A70B33D917832A9900EE9D93 /* UIKit.framework in Frameworks */,
 				A70B33DB17832A9900EE9D93 /* Foundation.framework in Frameworks */,
 				A70B33DD17832A9900EE9D93 /* CoreGraphics.framework in Frameworks */,
 				A70B33DF17832A9900EE9D93 /* CoreData.framework in Frameworks */,
+				25EAB4C05E3B4CE9A1DE7EF2 /* libPods-Get_Energy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		353A9AC0194E15E200AF7F77 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				353A9AC8194E15E200AF7F77 /* libMagicalRecord-iOS.a */,
-				353A9ACA194E15E200AF7F77 /* libMagicalRecord-OSX.dylib */,
-				353A9ACC194E15E200AF7F77 /* MagicalRecordTests-iOS.xctest */,
-				353A9ACE194E15E200AF7F77 /* MagicalRecordTests-OSX.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		353A9AD0194E16F200AF7F77 /* ItemCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +148,7 @@
 				A70B33E017832A9900EE9D93 /* Get_Energy */,
 				A70B33D717832A9900EE9D93 /* Frameworks */,
 				A70B33D617832A9900EE9D93 /* Products */,
+				ADFBE17D07AA4528BF11C506 /* Pods-Get_Energy.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,12 +164,11 @@
 			isa = PBXGroup;
 			children = (
 				35FCE8DA195162CA00938487 /* UIAlertView-Blocks-master */,
-				353A9ABF194E15E200AF7F77 /* MagicalRecord.xcodeproj */,
-				A7A03E04179149A80070405B /* libMagicalRecord-iOS.a */,
 				A70B33D817832A9900EE9D93 /* UIKit.framework */,
 				A70B33DA17832A9900EE9D93 /* Foundation.framework */,
 				A70B33DC17832A9900EE9D93 /* CoreGraphics.framework */,
 				A70B33DE17832A9900EE9D93 /* CoreData.framework */,
+				885EE7E82DA246E1941FD506 /* libPods-Get_Energy.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -235,7 +194,7 @@
 				356908C81952B036003C802F /* Get_Energy.xcdatamodeld */,
 				A783576D1795165700E8A7F1 /* SharedObjects */,
 				A7A03DEF179145630070405B /* en.lproj */,
-				A7A03DCE179140C50070405B /* Default-568h@2x.png */,
+				35E2D9741955CCA600229B9B /* Default-568h@2x.png */,
 				A7A03DCF179140C50070405B /* Default.png */,
 				A7A03DD0179140C50070405B /* Default@2x.png */,
 				A7A03DD1179140C50070405B /* Get_Energy-Info.plist */,
@@ -389,9 +348,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A70B340317832A9900EE9D93 /* Build configuration list for PBXNativeTarget "Get_Energy" */;
 			buildPhases = (
+				9C2B56610FEA4058812E3998 /* Check Pods Manifest.lock */,
 				A70B33D117832A9900EE9D93 /* Sources */,
 				A70B33D217832A9900EE9D93 /* Frameworks */,
 				A70B33D317832A9900EE9D93 /* Resources */,
+				33BD8918E35743A6B9DC2062 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -426,12 +387,6 @@
 			mainGroup = A70B33CC17832A9900EE9D93;
 			productRefGroup = A70B33D617832A9900EE9D93 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 353A9AC0194E15E200AF7F77 /* Products */;
-					ProjectRef = 353A9ABF194E15E200AF7F77 /* MagicalRecord.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				A70B33D417832A9900EE9D93 /* Get_Energy */,
@@ -439,43 +394,13 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		353A9AC8194E15E200AF7F77 /* libMagicalRecord-iOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libMagicalRecord-iOS.a";
-			remoteRef = 353A9AC7194E15E200AF7F77 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		353A9ACA194E15E200AF7F77 /* libMagicalRecord-OSX.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = "libMagicalRecord-OSX.dylib";
-			remoteRef = 353A9AC9194E15E200AF7F77 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		353A9ACC194E15E200AF7F77 /* MagicalRecordTests-iOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "MagicalRecordTests-iOS.xctest";
-			remoteRef = 353A9ACB194E15E200AF7F77 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		353A9ACE194E15E200AF7F77 /* MagicalRecordTests-OSX.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "MagicalRecordTests-OSX.xctest";
-			remoteRef = 353A9ACD194E15E200AF7F77 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		A70B33D317832A9900EE9D93 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A7A03DF6179145630070405B /* InfoPlist.strings in Resources */,
+				35E2D9751955CCA600229B9B /* Default-568h@2x.png in Resources */,
 				A7A03DF7179145630070405B /* MainStoryboard_iPad.storyboard in Resources */,
 				35FCE8E4195162CA00938487 /* LICENSE in Resources */,
 				A7A03DF8179145630070405B /* MainStoryboard_iPhone.storyboard in Resources */,
@@ -489,6 +414,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33BD8918E35743A6B9DC2062 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Get_Energy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C2B56610FEA4058812E3998 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A70B33D117832A9900EE9D93 /* Sources */ = {
@@ -604,6 +562,7 @@
 		};
 		A70B340417832A9900EE9D93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADFBE17D07AA4528BF11C506 /* Pods-Get_Energy.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -621,12 +580,14 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		A70B340517832A9900EE9D93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADFBE17D07AA4528BF11C506 /* Pods-Get_Energy.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -644,6 +605,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

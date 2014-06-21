@@ -18,7 +18,7 @@
 @implementation CreateOwnMethodVC
 
 - (id) initWithExistringMethod:(GE_Method *)method {
-    self = [self initWithNibName:nil bundle:nil];
+    self =  [[UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"CreateOwnMethodVC"];//initWithNibName:nil bundle:nil];
     if (self) {
         _currentMethod = method;
     }

@@ -43,19 +43,24 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+//    [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self
+//                                                                                                                  action:@selector(addNewMethod:)]];
+//    [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(onEditFilterPressed:)]];
+    
     self.managedObjectContext = [NSManagedObjectContext MR_context];
     
     
     NSString *placesPath = [[NSBundle mainBundle] pathForResource:@"methods" ofType:@"json"];
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:placesPath] options:0 error:nil];
 
-#warning Move to app delegate and do it only ince per each app
-    //Parse json and save to persistent store 
-    for (id nextObject in [dict valueForKey:@"methods"]) {
-        id method = [GE_Method MR_importFromObject:nextObject inContext:self.managedObjectContext];
-    }
-    //save context with new objects
-    [self.managedObjectContext save:nil];
+//#warning Move to app delegate and do it only ince per each app
+//    //Parse json and save to persistent store 
+//    for (id nextObject in [dict valueForKey:@"methods"]) {
+//        id method = [GE_Method MR_importFromObject:nextObject inContext:self.managedObjectContext];
+//    }
+//    //save context with new objects
+//    [self.managedObjectContext MR_saveToPersistentStoreAndWait];
     
     //create frc, clear its cache
     NSFetchRequest *requestForFRC = [GE_Method MR_requestAll];
@@ -125,7 +130,7 @@
 
 - (void)didLongPressOnCell:(UILongPressGestureRecognizer *)rcg {
     [_selectedCell.additionalView setHidden:YES];
-    ItemCell *cell = rcg.view;
+    ItemCell *cell = (ItemCell *)rcg.view;
     _selectedCell = cell;
     [cell.additionalView setHidden:NO];
 }
@@ -138,12 +143,12 @@
         
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
         GE_Method *current = [self.fetchedResultController objectAtIndexPath:indexPath];
-        [[NSManagedObjectContext MR_context] deleteObject:current];
-        [[NSManagedObjectContext MR_context] save:nil];
+        [self.managedObjectContext deleteObject:current];
+        [self.managedObjectContext save:nil];
         
     }];
     RIButtonItem *cancelItem = [RIButtonItem itemWithLabel:NSLocalizedString(@"Cancel", nil)];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Confirmation", nil) message:NSLocalizedString(@"_are_you_shure", nil) cancelButtonItem:cancelItem otherButtonItems:okItem, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Confirmation", nil) message:NSLocalizedString(@"_are_you_sure", nil) cancelButtonItem:cancelItem otherButtonItems:okItem, nil];
     [alert show];
     
 }
@@ -160,5 +165,14 @@
     GE_Method *current = [self.fetchedResultController objectAtIndexPath:indexPath];
     current.doneCountValue ++;
     [[NSManagedObjectContext MR_context] save:nil];
+}
+
+
+- (IBAction)addNewMethod:(id)sender {
+    CreateOwnMethodVC *vc = [CreateOwnMethodVC new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)onEditFilterPressed:(id)sender {
 }
 @end
