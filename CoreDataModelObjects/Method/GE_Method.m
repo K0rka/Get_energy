@@ -12,14 +12,15 @@
 
 //==============================================================================
 + (NSArray *) methodAttributes {
-    return  @[@"cost",
+    return  @[@"methodDescription",
+              @"title",
+              @"cost",
               @"duration",
-              @"methodDescription",
               @"peopleNumber",
               @"place",
               @"preparedList",
-              @"star",
-              @"title"];
+              @"star"
+              ];
 }
 
 @end

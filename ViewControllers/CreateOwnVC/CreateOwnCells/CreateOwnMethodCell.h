@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface CreateOwnMethodCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewHeightConstraint;
 
 @end

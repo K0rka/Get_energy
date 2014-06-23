@@ -30,8 +30,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self.tableView setSectionFooterHeight:44.];
-    self.tableView.rowHeight = 106;
+    self.tableView.rowHeight = 70.;
     [self.tableView registerNib:[UINib nibWithNibName:@"CreateOwnMethodCell" bundle:nil] forCellReuseIdentifier:@"CreateOwnMethodCell"];
 }
 
@@ -56,21 +55,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     CreateOwnMethodCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CreateOwnMethodCell"];
-//    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    cell.nameLabel.text = [[GE_Method methodAttributes] objectAtIndex:indexPath.row];
+    
+//    if ([_currentMethod valueForKey:[[GE_Method methodAttributes] objectAtIndex:indexPath.row]]) {
+//        cell.descriptionTextView.text =
+//    }
 //    
-//    [cell.textLabel setText:[NSString stringWithFormat:@"index path section = %d row = %d", indexPath.section, indexPath.row ]];
-    
     return cell;
-}
-
-
-//==============================================================================
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    UIButton *saveButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [saveButton addTarget:self action:@selector(saveNewMethod:) forControlEvents:UIControlEventTouchUpInside];
-    [saveButton setTitle:[@"Save" localized] forState:UIControlStateNormal];
-    
-    return saveButton;
 }
 
 

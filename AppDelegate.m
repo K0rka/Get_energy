@@ -10,6 +10,10 @@
 
 #import "MasterViewController.h"
 #import <MagicalRecord+Setup.h>
+#import "GE_Method.h"
+#import <NSManagedObject+MagicalDataImport.h>
+#import <NSManagedObjectContext+MagicalSaves.h>
+#import <NSManagedObjectContext+MagicalRecord.h>
 
 @implementation AppDelegate
 
@@ -21,18 +25,6 @@
 {
     
 //    self.managedObjectContext = [NSManagedObjectContext MR_context];
-    
-    
-    NSString *placesPath = [[NSBundle mainBundle] pathForResource:@"methods" ofType:@"json"];
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:placesPath] options:0 error:nil];
-    
-    //#warning Move to app delegate and do it only ince per each app
-    //    //Parse json and save to persistent store
-    //    for (id nextObject in [dict valueForKey:@"methods"]) {
-    //        id method = [GE_Method MR_importFromObject:nextObject inContext:self.managedObjectContext];
-    //    }
-    //    //save context with new objects
-    //    [self.managedObjectContext MR_saveToPersistentStoreAndWait];
     
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
@@ -53,6 +45,16 @@
     }
     
     
+    NSString *placesPath = [[NSBundle mainBundle] pathForResource:@"methods" ofType:@"json"];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:placesPath] options:0 error:nil];
+    
+    //#warning Move to app delegate and do it only ince per each app
+    //Parse json and save to persistent store
+//    for (id nextObject in [dict valueForKey:@"methods"]) {
+//        id method = [GE_Method MR_importFromObject:nextObject]; //inContext:self.managedObjectContext];
+//    }
+//    //save context with new objects
+//    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:nil];
     return YES;
 }
 							
