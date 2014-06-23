@@ -44,9 +44,9 @@
         controller.managedObjectContext = self.managedObjectContext;
     }
     
-    
-    NSString *placesPath = [[NSBundle mainBundle] pathForResource:@"methods" ofType:@"json"];
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:placesPath] options:0 error:nil];
+//    
+//    NSString *placesPath = [[NSBundle mainBundle] pathForResource:@"methods" ofType:@"json"];
+//    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:placesPath] options:0 error:nil];
     
     //#warning Move to app delegate and do it only ince per each app
     //Parse json and save to persistent store
