@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="6154.21" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" promptedForUpgradeToXcode5="NO" initialViewController="3">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
@@ -25,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-171" y="78"/>
         </scene>
-        <!--Create Own MethodVC - Item 2-->
+        <!--Create Own MethodVC-->
         <scene sceneID="z7k-7Z-sr7">
             <objects>
                 <viewController storyboardIdentifier="CreateOwnMethodVC" id="rc5-Ei-mYU" customClass="CreateOwnMethodVC" sceneMemberID="viewController">
@@ -34,39 +33,31 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fBg-WH-7t0">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="rc5-Ei-mYU" id="nQr-Z9-nhC"/>
                                     <outlet property="delegate" destination="rc5-Ei-mYU" id="1nV-Y0-Zgi"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfY-TU-LBa">
-                                <rect key="frame" x="0.0" y="460" width="320" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Fpo-r5-cBI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="PfY-TU-LBa" secondAttribute="centerX" type="user" id="2gp-qO-JRP"/>
                             <constraint firstAttribute="centerX" secondItem="fBg-WH-7t0" secondAttribute="centerX" type="user" id="JGB-01-35M"/>
+                            <constraint firstItem="fBg-WH-7t0" firstAttribute="top" secondItem="duy-jd-hTA" secondAttribute="top" type="default" id="NbE-gx-D4A"/>
                             <constraint firstItem="fBg-WH-7t0" firstAttribute="leading" secondItem="duy-jd-hTA" secondAttribute="leading" type="default" id="Rxa-21-eSw"/>
-                            <constraint firstAttribute="bottom" secondItem="PfY-TU-LBa" secondAttribute="bottom" type="default" id="V7t-CM-38B"/>
-                            <constraint firstItem="fBg-WH-7t0" firstAttribute="leading" secondItem="PfY-TU-LBa" secondAttribute="leading" type="default" id="VBV-Jf-9D8"/>
-                            <constraint firstItem="PfY-TU-LBa" firstAttribute="top" secondItem="fBg-WH-7t0" secondAttribute="bottom" type="user" id="oL7-dF-0Fm"/>
-                            <constraint firstItem="fBg-WH-7t0" firstAttribute="top" secondItem="duy-jd-hTA" secondAttribute="top" type="user" id="yJb-Dy-p2V"/>
+                            <constraint firstAttribute="centerY" secondItem="fBg-WH-7t0" secondAttribute="centerY" type="user" id="xQs-1z-H4I"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="xdD-qw-42c"/>
-                    <navigationItem key="navigationItem" id="aWX-CR-vhT"/>
+                    <navigationItem key="navigationItem" id="aWX-CR-vhT">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="k7W-86-e2j">
+                            <connections>
+                                <action selector="onSavePressed:" destination="rc5-Ei-mYU" id="GWY-MK-2GR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="saveBarButtonItem" destination="k7W-86-e2j" id="OG8-WT-yWP"/>
                         <outlet property="tableView" destination="fBg-WH-7t0" id="BhP-Hp-pNI"/>
                     </connections>
                 </viewController>

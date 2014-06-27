@@ -12,8 +12,8 @@
 
 //==============================================================================
 + (NSArray *) methodAttributes {
-    return  @[@"methodDescription",
-              @"title",
+    return  @[@"title",
+              @"methodDescription",
               @"cost",
               @"duration",
               @"peopleNumber",
