@@ -10,7 +10,7 @@
 #import "GE_Method.h"
 #import "NSString+StringAdditions.h"
 
-@interface CreateOwnMethodVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface CreateOwnMethodVC : UIViewController
 
 - (id) initWithExistringMethod:(GE_Method *)method;
 
