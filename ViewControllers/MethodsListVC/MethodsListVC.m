@@ -52,7 +52,7 @@
     
     [NSFetchedResultsController deleteCacheWithName:@"Methods name"];
     self.fetchedResultController = [[NSFetchedResultsController alloc] initWithFetchRequest:requestForFRC
-                                                                       managedObjectContext:self.managedObjectContext
+																	   managedObjectContext:[NSManagedObjectContext MR_defaultContext]
                                                                          sectionNameKeyPath:nil
                                                                                   cacheName:@"Methods name"];
     
@@ -69,6 +69,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+}
 
 
 

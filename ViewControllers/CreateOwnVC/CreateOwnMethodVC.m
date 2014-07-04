@@ -11,6 +11,7 @@
 #import <NSManagedObject+MagicalRecord.h>
 #import <NSManagedObjectContext+MagicalRecord.h>
 #import <NSManagedObjectContext+MagicalSaves.h>
+#import <MagicalRecord/MagicalRecord+Actions.h>
 
 
 @interface CreateOwnMethodVC () <UITextViewDelegate, UITextFieldDelegate> {
@@ -86,18 +87,28 @@
 ////////////////////////////////////////////////////////////////////////
 - (IBAction)onSavePressed:(id)sender {
     if (!_currentMethod) {
-        NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
-        GE_Method *newMethod = [GE_Method MR_createInContext:context];
-        NSString *title = self.titleTextField.text;
-        if (!title.length) {
-            title = NSLocalizedString(@"_without_title", nil);
-        }
-        newMethod.title = title;
-        if (self.descriptionTextView.text) {
-            newMethod.methodDescription = self.descriptionTextView.text;
-        }
-        [context MR_saveToPersistentStoreWithCompletion:nil];
-        [self.navigationController popViewControllerAnimated:YES];
+		[MagicalRecord saveWithBlock:^(NSManagedObjectContext *context) {
+			GE_Method *newMethod = [GE_Method MR_createInContext:context];
+			NSString *title = self.titleTextField.text;
+			if (!title.length) {
+				title = NSLocalizedString(@"_without_title", nil);
+			}
+			newMethod.title = title;
+			if (self.descriptionTextView.text) {
+				newMethod.methodDescription = self.descriptionTextView.text;
+			}
+		} completion:^(BOOL success, NSError *error) {
+			[self.navigationController popViewControllerAnimated:YES];
+		}];
+		
+//        NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
+//		
+//        [context MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
+//			if (success) {
+//				[self.navigationController popViewControllerAnimated:YES];
+//			}
+//			
+//		}];
     }
 }
 
@@ -114,7 +125,28 @@
 
 
 - (IBAction)onMoneyImagesPan:(UIPanGestureRecognizer *)recognizer {
-    
+	switch (recognizer.state) {
+  case UIGestureRecognizerStateBegan: {
+	  NSLog(@"");
+  }
+			break;
+		case UIGestureRecognizerStateChanged: {
+			for (UIImageView *nextView in _moneyImagesCollection) {
+				CGPoint point1  = [recognizer locationInView:nextView];
+				if (point1.x > CGRectGetWidth([nextView frame])/2.) {
+					[nextView setBackgroundColor:[UIColor purpleColor]];
+				}
+				else if (point1.x < CGRectGetWidth([nextView frame])/2. - 2.5)  {
+					[nextView setBackgroundColor:[UIColor clearColor]];
+				}
+				
+			}
+
+		}
+			break;
+  default:
+			break;
+	}
 }
 
 - (IBAction)onStarsImagesPan:(UIPanGestureRecognizer *)recognizer {
