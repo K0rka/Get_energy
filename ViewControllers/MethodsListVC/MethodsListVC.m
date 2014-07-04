@@ -60,7 +60,7 @@
     [self.fetchedResultController performFetch:nil];
     self.fetchedResultController.delegate = self;
     [self.tableView registerNib:[UINib nibWithNibName:@"ItemCell" bundle:nil] forCellReuseIdentifier:@"ItemCell"];
-
+	self.tableView.rowHeight = 44.;
 }
 
 - (void)didReceiveMemoryWarning
