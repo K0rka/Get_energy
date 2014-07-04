@@ -73,6 +73,14 @@
         }
     }
 
+	for (UIImageView *nextView in _starsImagesCollection) {
+		[nextView setUserInteractionEnabled:YES];
+		[nextView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onStarTapped:)]];
+	}
+	for (UIImageView *nextView in _moneyImagesCollection) {
+		[nextView setUserInteractionEnabled:YES];
+		[nextView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onMoneyTapped:)]];
+	}
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,15 +108,6 @@
 		} completion:^(BOOL success, NSError *error) {
 			[self.navigationController popViewControllerAnimated:YES];
 		}];
-		
-//        NSManagedObjectContext *context = [NSManagedObjectContext MR_defaultContext];
-//		
-//        [context MR_saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
-//			if (success) {
-//				[self.navigationController popViewControllerAnimated:YES];
-//			}
-//			
-//		}];
     }
 }
 
@@ -150,7 +149,18 @@
 }
 
 - (IBAction)onStarsImagesPan:(UIPanGestureRecognizer *)recognizer {
-    
+	if ( recognizer.state == UIGestureRecognizerStateChanged) {
+		for (UIImageView *nextView in _starsImagesCollection) {
+			CGPoint point1  = [recognizer locationInView:nextView];
+			if (point1.x > CGRectGetWidth([nextView frame])/2.) {
+				[nextView setBackgroundColor:[UIColor yellowColor]];
+			}
+			else if (point1.x < CGRectGetWidth([nextView frame])/2. - 2.5)  {
+				[nextView setBackgroundColor:[UIColor clearColor]];
+			}
+			
+		}
+	}
 }
 
 
@@ -210,7 +220,32 @@
 
 
 ////////////////////////////////////////////////////////////////////////
-#pragma mark - UITextViewDelagate
+#pragma mark - Gestures
 ////////////////////////////////////////////////////////////////////////
+-(void)onStarTapped:(UITapGestureRecognizer *)recgn {
+	BOOL findView = NO;
+	for (UIImageView *nextImageView in _starsImagesCollection) {
+		[nextImageView setBackgroundColor:[UIColor yellowColor]];
+		if (findView) {
+			[nextImageView setBackgroundColor:[UIColor clearColor]];
+		}
+		if (nextImageView == recgn.view) {
+			findView = YES;
+		}
+	}
+}
+
+-(void)onMoneyTapped:(UITapGestureRecognizer *)recgn {
+	BOOL findView = NO;
+	for (UIImageView *nextImageView in _moneyImagesCollection) {
+		[nextImageView setBackgroundColor:[UIColor purpleColor]];
+		if (findView) {
+			[nextImageView setBackgroundColor:[UIColor clearColor]];
+		}
+		if (nextImageView == recgn.view) {
+			findView = YES;
+		}
+	}
+}
 
 @end
