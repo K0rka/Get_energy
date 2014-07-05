@@ -73,7 +73,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "164"
             endingLineNumber = "164"
-            landmarkName = "-textFieldShouldReturn:"
+            landmarkName = "-onStarsImagesPan:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.21" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
     <objects>
@@ -14,24 +13,35 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hK4-cO-HBX">
-                        <rect key="frame" x="20" y="12" width="231" height="21"/>
+                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hK4-cO-HBX">
+                        <rect key="frame" x="15" y="11" width="248" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="E24-yd-FEQ"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qj6-k1-bqP">
-                        <rect key="frame" x="278" y="11" width="22" height="22"/>
+                    <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qj6-k1-bqP">
+                        <rect key="frame" x="283" y="11" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="1x7-go-ke9"/>
+                            <constraint firstAttribute="height" constant="22" id="pJP-5O-xK9"/>
+                        </constraints>
                         <state key="normal">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
-                    <view hidden="YES" appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t0J-me-1LW" userLabel="AdditionalView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <view hidden="YES" appearanceType="aqua" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0J-me-1LW" userLabel="AdditionalView">
+                        <rect key="frame" x="0.0" y="1" width="320" height="42"/>
                         <subviews>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wv3-mx-sHS" userLabel="Edit">
-                                <rect key="frame" x="20" y="7" width="54" height="30"/>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wv3-mx-sHS" userLabel="Edit">
+                                <rect key="frame" x="20" y="6" width="60" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.1333122073750781" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2o1-mi-b1c"/>
+                                    <constraint firstAttribute="width" constant="60" id="bWS-q8-uH1"/>
+                                </constraints>
                                 <state key="normal" title="Edit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -39,9 +49,13 @@
                                     <action selector="onEditPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="WcF-I7-dDz"/>
                                 </connections>
                             </button>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaY-fY-Foe" userLabel="Don't want">
-                                <rect key="frame" x="254" y="7" width="46" height="30"/>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaY-fY-Foe" userLabel="Don't want">
+                                <rect key="frame" x="240" y="6" width="60" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.1333122073750781" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="72N-ct-ds0"/>
+                                    <constraint firstAttribute="width" constant="60" id="Ok2-yi-x1U"/>
+                                </constraints>
                                 <state key="normal" title="Don't want">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -49,9 +63,13 @@
                                     <action selector="onDontPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="sZM-aT-g6k"/>
                                 </connections>
                             </button>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hu-zG-AgU" userLabel="Done">
-                                <rect key="frame" x="137" y="7" width="46" height="30"/>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hu-zG-AgU" userLabel="Done">
+                                <rect key="frame" x="130" y="6" width="60" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.1333122073750781" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="7kg-Ie-6vq"/>
+                                    <constraint firstAttribute="height" constant="30" id="zGE-i3-WEA"/>
+                                </constraints>
                                 <state key="normal" title="Done">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -61,9 +79,28 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wv3-mx-sHS" firstAttribute="leading" secondItem="t0J-me-1LW" secondAttribute="leading" constant="20" id="EeK-SR-h9L"/>
+                            <constraint firstAttribute="centerX" secondItem="1hu-zG-AgU" secondAttribute="centerX" id="EfH-EB-l85"/>
+                            <constraint firstAttribute="centerY" secondItem="wv3-mx-sHS" secondAttribute="centerY" id="IEP-AE-RJU"/>
+                            <constraint firstAttribute="centerY" secondItem="1hu-zG-AgU" secondAttribute="centerY" id="Ief-CR-2lC"/>
+                            <constraint firstAttribute="centerY" secondItem="yaY-fY-Foe" secondAttribute="centerY" id="bbK-cN-DZi"/>
+                            <constraint firstAttribute="trailing" secondItem="yaY-fY-Foe" secondAttribute="trailing" constant="20" id="lGE-zR-T8T"/>
+                        </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.67795488910000001" green="0.39868951609999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="hK4-cO-HBX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="LyJ-Do-gHk"/>
+                    <constraint firstAttribute="centerY" secondItem="t0J-me-1LW" secondAttribute="centerY" id="OaI-jI-QYg"/>
+                    <constraint firstAttribute="centerY" secondItem="hK4-cO-HBX" secondAttribute="centerY" id="U5j-SJ-V2h"/>
+                    <constraint firstAttribute="centerX" secondItem="t0J-me-1LW" secondAttribute="centerX" id="YAF-Z6-1gx"/>
+                    <constraint firstItem="qj6-k1-bqP" firstAttribute="leading" secondItem="hK4-cO-HBX" secondAttribute="trailing" constant="20" id="ZZF-eY-Gva"/>
+                    <constraint firstAttribute="bottom" secondItem="t0J-me-1LW" secondAttribute="bottom" id="i6Z-5b-0ZT"/>
+                    <constraint firstAttribute="centerY" secondItem="qj6-k1-bqP" secondAttribute="centerY" id="lDk-39-g2S"/>
+                    <constraint firstAttribute="trailing" secondItem="qj6-k1-bqP" secondAttribute="trailing" constant="15" id="umg-Dr-2Af"/>
+                    <constraint firstItem="t0J-me-1LW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zWs-E9-7RD"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="additionalView" destination="t0J-me-1LW" id="Erg-CE-Qbs"/>
