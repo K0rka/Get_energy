@@ -20,6 +20,6 @@
 @interface ItemCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIView *additionalView;
-@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (nonatomic, assign) id<ItemCellDelegate> delegate;
 @end

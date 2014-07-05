@@ -8,10 +8,7 @@
 
 #import "CreateOwnMethodVC.h"
 #import "CreateOwnMethodCell.h"
-#import <NSManagedObject+MagicalRecord.h>
-#import <NSManagedObjectContext+MagicalRecord.h>
-#import <NSManagedObjectContext+MagicalSaves.h>
-#import <MagicalRecord/MagicalRecord+Actions.h>
+
 
 
 @interface CreateOwnMethodVC () <UITextViewDelegate, UITextFieldDelegate> {
@@ -31,6 +28,8 @@
 @property (weak, nonatomic) IBOutlet UIView *moneySuperview;
 @property (weak, nonatomic) IBOutlet UILabel *tagsLabel;
 @property (weak, nonatomic) IBOutlet UIButton *addNewTagButton;
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
+@property (weak, nonatomic) IBOutlet UIButton *repeatButton;
 
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *moneyImagesCollection;
@@ -105,6 +104,12 @@
 			if (self.descriptionTextView.text) {
 				newMethod.methodDescription = self.descriptionTextView.text;
 			}
+            if (_doneButton.isSelected) {
+                newMethod.doneCount = @(1);
+            }
+            if (_repeatButton.isSelected) {
+                newMethod.maxDoneCount = @(100);
+            }
 		} completion:^(BOOL success, NSError *error) {
 			[self.navigationController popViewControllerAnimated:YES];
 		}];
@@ -112,55 +117,24 @@
 }
 
 
-////////////////////////////////////////////////////////////////////////
-#pragma mark - User Interaction
-////////////////////////////////////////////////////////////////////////
 - (IBAction)addNewTag:(id)sender {
+    [self performSegueWithIdentifier:@"CreateToTags" sender:self];
 }
+
+
 - (IBAction)onScrollViewTap:(id)sender {
     [self.titleTextField resignFirstResponder];
     [self.descriptionTextView resignFirstResponder];
 }
 
 
-- (IBAction)onMoneyImagesPan:(UIPanGestureRecognizer *)recognizer {
-	switch (recognizer.state) {
-  case UIGestureRecognizerStateBegan: {
-	  NSLog(@"");
-  }
-			break;
-		case UIGestureRecognizerStateChanged: {
-			for (UIImageView *nextView in _moneyImagesCollection) {
-				CGPoint point1  = [recognizer locationInView:nextView];
-				if (point1.x > CGRectGetWidth([nextView frame])/2.) {
-					[nextView setBackgroundColor:[UIColor purpleColor]];
-				}
-				else if (point1.x < CGRectGetWidth([nextView frame])/2. - 2.5)  {
-					[nextView setBackgroundColor:[UIColor clearColor]];
-				}
-				
-			}
-
-		}
-			break;
-  default:
-			break;
-	}
+- (IBAction)onDonePressed:(UIButton *)doneButton {
+    [doneButton setSelected:!doneButton.isSelected];
 }
 
-- (IBAction)onStarsImagesPan:(UIPanGestureRecognizer *)recognizer {
-	if ( recognizer.state == UIGestureRecognizerStateChanged) {
-		for (UIImageView *nextView in _starsImagesCollection) {
-			CGPoint point1  = [recognizer locationInView:nextView];
-			if (point1.x > CGRectGetWidth([nextView frame])/2.) {
-				[nextView setBackgroundColor:[UIColor yellowColor]];
-			}
-			else if (point1.x < CGRectGetWidth([nextView frame])/2. - 2.5)  {
-				[nextView setBackgroundColor:[UIColor clearColor]];
-			}
-			
-		}
-	}
+
+- (IBAction)onRepeatablePressed:(UIButton *)repeatButton {
+    [repeatButton setSelected:!repeatButton.isSelected];
 }
 
 
@@ -247,5 +221,38 @@
 		}
 	}
 }
+
+
+- (IBAction)onMoneyImagesPan:(UIPanGestureRecognizer *)recognizer {
+    if (recognizer.state == UIGestureRecognizerStateChanged) {
+        for (UIImageView *nextView in _moneyImagesCollection) {
+            CGPoint point1  = [recognizer locationInView:nextView];
+            if (point1.x > CGRectGetWidth([nextView frame])/2.) {
+                [nextView setBackgroundColor:[UIColor purpleColor]];
+            }
+            else if (point1.x < CGRectGetWidth([nextView frame])/2. - 2.5)  {
+                [nextView setBackgroundColor:[UIColor clearColor]];
+            }
+            
+        }
+        
+    }
+}
+
+- (IBAction)onStarsImagesPan:(UIPanGestureRecognizer *)recognizer {
+    if ( recognizer.state == UIGestureRecognizerStateChanged) {
+        for (UIImageView *nextView in _starsImagesCollection) {
+            CGPoint point1  = [recognizer locationInView:nextView];
+            if (point1.x > CGRectGetWidth([nextView frame])/2.) {
+                [nextView setBackgroundColor:[UIColor yellowColor]];
+            }
+            else if (point1.x < CGRectGetWidth([nextView frame])/2. - 2.5)  {
+                [nextView setBackgroundColor:[UIColor clearColor]];
+            }
+            
+        }
+    }
+}
+
 
 @end

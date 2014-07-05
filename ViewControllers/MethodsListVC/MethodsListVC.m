@@ -82,7 +82,7 @@
     ItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ItemCell"];//[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"NewCell"];
     
     GE_Method *current = [self.fetchedResultController objectAtIndexPath:indexPath];
-    [cell.textLabel setText:current.title];
+    [cell.titleLabel setText:current.title];
     cell.delegate = self;
     UILongPressGestureRecognizer *rcgn = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(didLongPressOnCell:)];
     
@@ -148,7 +148,8 @@
 - (void) onDonePressed:(ItemCell *)cell {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     GE_Method *current = [self.fetchedResultController objectAtIndexPath:indexPath];
-    current.doneCountValue ++;
+    NSInteger doneCount = [current.doneCount integerValue];
+    current.doneCount = [NSNumber numberWithInteger:(doneCount++)];
     [[NSManagedObjectContext MR_context] MR_saveToPersistentStoreWithCompletion:nil];
 }
 

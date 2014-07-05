@@ -105,9 +105,6 @@
     
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DetailCell"];
     
-	[self.tableView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[cell]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(cell)]];
-//	[self.tableView addConstraint:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[cell]|" options:nil metrics:nil views:NSDictionaryOfVariableBindings(cell)]];
-
     cell.textLabel.text = [_currentMethodDescriptionArray objectAtIndex:indexPath.row];
     cell.detailTextLabel.text = [nextVal isKindOfClass:[NSString class]]? nextVal  : [NSString stringWithFormat:@"%@", nextVal ];
     return cell;

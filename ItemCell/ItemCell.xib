@@ -104,7 +104,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="additionalView" destination="t0J-me-1LW" id="Erg-CE-Qbs"/>
-                <outlet property="textLabel" destination="hK4-cO-HBX" id="8oI-SH-cvW"/>
+                <outlet property="titleLabel" destination="hK4-cO-HBX" id="HQk-1u-XgC"/>
             </connections>
             <point key="canvasLocation" x="305" y="341"/>
         </tableViewCell>
