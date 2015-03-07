@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6172.15" systemVersion="14A238x" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14C109" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="GE_Method" representedClassName="GE_Method" syncable="YES">
         <attribute name="cost" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="doneCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -19,17 +19,17 @@
                 <entry key="mappedKeyName" value="title"/>
             </userInfo>
         </attribute>
-        <relationship name="tags" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Tag" inverseName="methods" inverseEntity="Tag" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="methods" inverseEntity="Tag" syncable="YES"/>
         <userInfo>
             <entry key="relatedByAttribute" value="title"/>
         </userInfo>
     </entity>
     <entity name="Tag" representedClassName="Tag" syncable="YES">
         <attribute name="tagName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="methods" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="GE_Method" inverseName="tags" inverseEntity="GE_Method" syncable="YES"/>
+        <relationship name="methods" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GE_Method" inverseName="tags" inverseEntity="GE_Method" syncable="YES"/>
     </entity>
     <elements>
         <element name="GE_Method" positionX="160" positionY="192" width="128" height="210"/>
-        <element name="Tag" positionX="162" positionY="270" width="128" height="73"/>
+        <element name="Tag" positionX="162" positionY="270" width="128" height="75"/>
     </elements>
 </model>

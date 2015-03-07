@@ -17,9 +17,11 @@
 #import "ItemCell.h"
 #import "UIAlertView+Blocks.h"
 #import "CreateOwnMethodVC.h"
+#import "EmptyView.h"
 
-@interface MethodsListVC () <ItemCellDelegate>{
+@interface MethodsListVC () <ItemCellDelegate, EmptyViewDelegate>{
     ItemCell *_selectedCell;
+    EmptyView *_emptyView;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -31,19 +33,29 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
 
 
-
+- (void)configureEmptyView
+{
+    // Custom initialization
+    _emptyView = [[[NSBundle mainBundle] loadNibNamed:@"EmptyView" owner:self options:nil] firstObject];
+    _emptyView.emptyText.text = [@"_have_no_wishes" localized];
+    [_emptyView.emptyViewButton setTitle:[@"_create_new" localized] forState:UIControlStateNormal];
+    [_emptyView setFrame:self.view.frame];
+    _emptyView.delegate = self;
+    [self.view addSubview:_emptyView];
+    [_emptyView setHidden:YES];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+    [self configureEmptyView];
+
     //create frc, clear its cache
     NSFetchRequest *requestForFRC = [GE_Method MR_requestAll];
     NSSortDescriptor *sortDescriptorForFRC = [NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES];
@@ -61,6 +73,7 @@
     self.fetchedResultController.delegate = self;
     [self.tableView registerNib:[UINib nibWithNibName:@"ItemCell" bundle:nil] forCellReuseIdentifier:@"ItemCell"];
 	self.tableView.rowHeight = 44.;
+    [self configureHiddenessOfView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,6 +87,18 @@
 }
 
 
+- (void)configureHiddenessOfView
+{
+    if (!self.fetchedResultController.fetchedObjects.count && _emptyView.isHidden) {
+        [self.tableView setHidden:YES];
+        [_emptyView setHidden:NO];
+    }
+    else if ([self.tableView isHidden])
+    {
+        [_emptyView setHidden:YES];
+        [self.tableView setHidden:NO];
+    }
+}
 
 ////////////////////////////////////////////////////////////////////////
 #pragma mark - table view
@@ -128,9 +153,9 @@
         
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
         GE_Method *current = [self.fetchedResultController objectAtIndexPath:indexPath];
-        [self.managedObjectContext deleteObject:current];
-        [self.managedObjectContext save:nil];
-        
+        [MagicalRecord saveWithBlock:^(NSManagedObjectContext *context) {
+            [context deleteObject:[context objectWithID:current.objectID]];
+        }];
     }];
     RIButtonItem *cancelItem = [RIButtonItem itemWithLabel:NSLocalizedString(@"Cancel", nil)];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Confirmation", nil) message:NSLocalizedString(@"_are_you_sure", nil) cancelButtonItem:cancelItem otherButtonItems:okItem, nil];
@@ -164,7 +189,7 @@
 
 
 
-#pragma mark FRC
+#pragma mark - FRC
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView beginUpdates];
 }
@@ -183,6 +208,18 @@
             [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex]
                           withRowAnimation:UITableViewRowAnimationFade];
             break;
+            case NSFetchedResultsChangeUpdate:
+        {
+            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:sectionIndex]
+                          withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        }
+            case NSFetchedResultsChangeMove:
+        {
+//            [self.tableView moveSection:<#(NSInteger)#> toSection:<#(NSInteger)#>:[NSIndexSet indexSetWithIndex:sectionIndex]
+//                          withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        }
     }
 }
 
@@ -221,6 +258,13 @@
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView endUpdates];
+    [self configureHiddenessOfView];
 }
 
+
+#pragma mark - EmptyViewDelegate
+- (void)emptyButtonWasPressedInEmptyView:(EmptyView *)view
+{
+    [self addNewMethod:nil];
+}
 @end

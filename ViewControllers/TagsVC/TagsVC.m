@@ -13,7 +13,7 @@
 #import "TagsCell.h"
 #import "UIAlertView+Blocks.h"
 
-@interface TagsVC ()
+@interface TagsVC () <NSFetchedResultsControllerDelegate>
 @property (nonatomic, strong) NSFetchedResultsController *frc;
 
 
@@ -166,6 +166,7 @@
             [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex]
                           withRowAnimation:UITableViewRowAnimationFade];
             break;
+        default:break;
     }
 }
 

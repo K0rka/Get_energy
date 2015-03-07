@@ -41,6 +41,8 @@
 		A7A03DFB179145BD0070405B /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03DC9179140960070405B /* MasterViewController.m */; };
 		A7A03DFD179145C60070405B /* MethodsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A03DD7179140F70070405B /* MethodsListVC.m */; };
 		A7A03E3B179167350070405B /* methods.json in Resources */ = {isa = PBXBuildFile; fileRef = A7A03E3A179167340070405B /* methods.json */; };
+		F0FE094C1AAB1F0D00A15B48 /* EmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FE094B1AAB1F0D00A15B48 /* EmptyView.m */; };
+		F0FE094E1AAB1F2000A15B48 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FE094D1AAB1F2000A15B48 /* EmptyView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +106,9 @@
 		A7A03E3A179167340070405B /* methods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = methods.json; path = CoreDataModelObjects/methods.json; sourceTree = SOURCE_ROOT; };
 		ADFBE17D07AA4528BF11C506 /* Pods-Get_Energy.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get_Energy.xcconfig"; path = "Pods/Pods-Get_Energy.xcconfig"; sourceTree = "<group>"; };
 		D779193B1B6F43E0B1EB5CFF /* libPods-Get_Energy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Get_Energy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0FE094A1AAB1F0D00A15B48 /* EmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyView.h; sourceTree = SOURCE_ROOT; };
+		F0FE094B1AAB1F0D00A15B48 /* EmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyView.m; sourceTree = SOURCE_ROOT; };
+		F0FE094D1AAB1F2000A15B48 /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +207,7 @@
 		A70B33E017832A9900EE9D93 /* Get_Energy */ = {
 			isa = PBXGroup;
 			children = (
+				F0FE09491AAB1EED00A15B48 /* EmptyView */,
 				353A9AD0194E16F200AF7F77 /* ItemCell */,
 				A7A03DC6179140960070405B /* AppDelegate.h */,
 				A7A03DC7179140960070405B /* AppDelegate.m */,
@@ -368,6 +374,16 @@
 			path = en.lproj;
 			sourceTree = SOURCE_ROOT;
 		};
+		F0FE09491AAB1EED00A15B48 /* EmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				F0FE094A1AAB1F0D00A15B48 /* EmptyView.h */,
+				F0FE094B1AAB1F0D00A15B48 /* EmptyView.m */,
+				F0FE094D1AAB1F2000A15B48 /* EmptyView.xib */,
+			);
+			name = EmptyView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -430,6 +446,7 @@
 				35E2D9751955CCA600229B9B /* Default-568h@2x.png in Resources */,
 				A7A03DF7179145630070405B /* MainStoryboard_iPad.storyboard in Resources */,
 				35FCE8E4195162CA00938487 /* LICENSE in Resources */,
+				F0FE094E1AAB1F2000A15B48 /* EmptyView.xib in Resources */,
 				A7A03DF8179145630070405B /* MainStoryboard_iPhone.storyboard in Resources */,
 				35FCE8E9195162CA00938487 /* UIAlertView-Blocks.podspec in Resources */,
 				A7A03E3B179167350070405B /* methods.json in Resources */,
@@ -492,6 +509,7 @@
 				A7835769179447F500E8A7F1 /* DetailMethodDescriptionVC.m in Sources */,
 				35FCE8E8195162CA00938487 /* UIAlertView+Blocks.m in Sources */,
 				A718A22C179ED50C0047D230 /* MethodDescriptionCell.m in Sources */,
+				F0FE094C1AAB1F0D00A15B48 /* EmptyView.m in Sources */,
 				A718A232179FAA950047D230 /* NSString+StringAdditions.m in Sources */,
 				35CF942D19683B07009A8789 /* GE_Method.m in Sources */,
 				A718A236179FAD8D0047D230 /* CreateOwnMethodVC.m in Sources */,

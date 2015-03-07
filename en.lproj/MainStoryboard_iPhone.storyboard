@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="6154.21" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" promptedForUpgradeToXcode5="NO" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" promptedForUpgradeToXcode5="NO" initialViewController="3">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
+        <deployment identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -107,7 +107,7 @@
                                             <outletCollection property="gestureRecognizers" destination="b6m-24-Eht" appends="YES" id="xDV-MX-xBn"/>
                                         </connections>
                                     </view>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azo-RD-gnS">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="azo-RD-gnS">
                                         <rect key="frame" x="15" y="60" width="127" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.13331220739999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -118,7 +118,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7an-84-XsE">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7an-84-XsE">
                                         <rect key="frame" x="15" y="105" width="127" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.13331220739999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -128,7 +128,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsd-FK-NYM">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rsd-FK-NYM">
                                         <rect key="frame" x="15" y="150" width="231" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.13331220739999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -361,7 +361,7 @@
             </objects>
             <point key="canvasLocation" x="906" y="453"/>
         </scene>
-        <!--TagsVC - Tags-->
+        <!--Tags-->
         <scene sceneID="sPa-l7-pTo">
             <objects>
                 <tableViewController id="xtC-Fu-hfZ" customClass="TagsVC" sceneMemberID="viewController">
@@ -376,7 +376,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nN-i3-1ll">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4nN-i3-1ll">
                                             <rect key="frame" x="15" y="7" width="253" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" type="user" id="wKN-bu-DGG"/>
@@ -425,7 +425,7 @@
             </objects>
             <point key="canvasLocation" x="1282" y="455"/>
         </scene>
-        <!--Methods ListVC - Item 1-->
+        <!--Item 1-->
         <scene sceneID="olA-kd-9Nx">
             <objects>
                 <viewController id="6kc-XN-Zfd" customClass="MethodsListVC" sceneMemberID="viewController">
@@ -475,7 +475,7 @@
             </objects>
             <point key="canvasLocation" x="233" y="-11"/>
         </scene>
-        <!--Detail Method DescriptionVC - DetailMethodDescriptionVC-->
+        <!--DetailMethodDescriptionVC-->
         <scene sceneID="MRE-Ia-ktm">
             <objects>
                 <viewController storyboardIdentifier="DetailMethodDescriptionVC" title="DetailMethodDescriptionVC" id="Nuf-7z-9cH" customClass="DetailMethodDescriptionVC" sceneMemberID="viewController">
